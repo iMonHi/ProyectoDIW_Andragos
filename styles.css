@@ -19,6 +19,7 @@ body {
     font-size: 1.6rem;
     line-height: 2;
     margin: 0;
+    background-color: var(--blanco);
 }
 
 /* Globales */
@@ -38,14 +39,44 @@ h4 { font-size: 2.8rem; }
 img { width: 100%; } /*Poner imagen*/
 
 .header, .contenedor, .footer {
-    max-width: 120rem;
     text-align: center;
-    margin: 0 auto;
+    margin: 0;
+}
+
+.boton {
+    border: none;
+    background-color: var(--hover);
+    border-radius: 5%;
+    padding: 1rem 2rem;
+    font-size: 1.7rem;
+    font-weight: bold;
+    color: var(--blanco);
+}
+
+/* Utilidades */
+.display-block {
+    display: block;
+}
+
+.centrar-texto {
+    text-align: center;
+}
+
+.espacio-entre-campos {
+    margin-bottom: 1rem;
 }
 
 /* Header y Navegación */
 
 h1 span { font-size: 2.8rem; color: var(--blanco); }
+
+.h3__contacto {
+    margin: 2rem;
+}
+
+.cabecera__formulario p {
+    margin: 0 auto 4rem auto;
+}
 
 .barra {
     background-color: var(--primario);
@@ -62,4 +93,43 @@ h1 span { font-size: 2.8rem; color: var(--blanco); }
     color: var(--blanco);
 }
 
+/* Footer */
+.navegacion__enlace {
+    font-size: small;
+}
 
+
+/* Formulario */
+
+.contacto {
+    margin-bottom: 5rem;
+}
+
+.formulario {
+    max-width: 60%;
+    margin: 0 auto;
+    padding: 2rem 4rem;
+    border: 5px solid var(--hover);
+    border-radius: 2%;
+}
+
+fieldset {
+    border: 1px solid var(--azul_claro);
+    border-radius: 2%;
+}
+
+.campo__field {
+    height: 2rem;
+    border: 1.5px solid var(--hover);
+    border-radius: 2%;
+    padding: 0.3rem;
+    background-color: var(--blanco);
+    font-family: inherit;
+}
+
+.campo__field--pais {
+    border: 1.5px solid var(--hover);
+    border-radius: 2%;
+    padding: 0.3rem;
+    font-family: inherit;
+}
