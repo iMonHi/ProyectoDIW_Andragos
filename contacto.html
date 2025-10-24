@@ -38,49 +38,49 @@
     </header>
 
     <main class="contenedor">
-        <h3 class="centrar-texto h3__contacto">Contacto</h3>
+        <h3 class="centrar-texto h3__contacto"><span>Contacto</span></h3>
 
         <div class="contacto">
 
             <form class="formulario centrar-texto">
                 <!-- Nombre -->
-                <div class="espacio-entre-campos">
+                <div class="espacio-campos">
                     <label class="campo__label" for="nombre">Nombre</label>
                     <input class="campo__field" type="text" placeholder="Tu Nombre" name="nombre" id="nombre" required>
                 </div>
 
                 <!-- Apellidos -->
-                <div class="espacio-entre-campos">
+                <div class="espacio-campos">
                     <label class="campo__label" for="apellidos">Apellidos</label>
                     <input class="campo__field" type="text" placeholder="Tus apellidos" name="apellidos" id="apellidos" required>
                 </div>
                 <!-- Telf -->
-                <div class="espacio-entre-campos">
+                <div class="espacio-campos">
                     <label class="campo__label" for="telf">Teléfono</label>
                     <input class="campo__field" type="tel" placeholder="Tu teléfono" name="telf" id="telf">
                 </div>
                 <!-- Dirección -->
-                <fieldset class="espacio-entre-campos">
+                <fieldset class="espacio-campos ">
                     <legend>Dirección</legend>
                     <div class="direccion">
 
-                        <div class="display__block espacio-entre-campos">
+                        <div class="display__block espacio-campos">
                             <label class="campo__label" for="calle">Calle</label>
                             <input class="campo__field" type="text" placeholder="Calle" name="calle" id="calle">
                         </div>
-                        <div class="display__block espacio-entre-campos">
+                        <div class="display__block espacio-campos">
                             <label class="campo__label" for="numero">Nº</label>
                             <input class="campo__field" type="text" placeholder="1B" name="numero" id="numero">
                         </div>
-                        <div class="display__block espacio-entre-campos">
+                        <div class="display__block espacio-campos">
                             <label class="campo__label" for="localidad">Localidad</label>
                             <input class="campo__field" type="text" placeholder="Localidad" name="localidad" id="localidad">
                         </div>
-                        <div class="display__block espacio-entre-campos">
+                        <div class="display__block espacio-campos">
                             <label class="campo__label" for="dir_postal">Código postal</label>
                             <input class="campo__field" type="text" pattern="^\d{5}$" placeholder="Código postal" name="dir_postal" id="dir_postal">
                         </div>
-                        <div class="display__block espacio-entre-campos">
+                        <div class="display__block espacio-campos">
                             <label class="campo__label" for="provincia">Provincia</label>
                             <input class="campo__field" type="text" placeholder="Provincia" name="provincia" id="provincia">
                         </div>
@@ -285,51 +285,51 @@
                 </fieldset>
 
                 <!-- Email -->
-                <div class="espacio-entre-campos">
+                <div class="espacio-campos">
                     <label class="campo__label" for="email">Email</label>
                     <input class="campo__field" type="email" placeholder="Tu email" name="email" id="email" required>
                 </div>
                 <!-- Contraseña -->
-                <div class="espacio-entre-campos">
+                <div class="espacio-campos">
                     <label class="campo__label" for="contrasena">Contraseña</label>
                     <input class="campo__field" type="password" placeholder="Introduce tu clave" name="contrasena" id="contrasena" required>
                 </div>
                 <!-- ¿Cómo nos has conocido? -->
                 <fieldset>
                     <legend>¿Cómo nos has conocido?</legend>
-                    <div class="espacio-entre-campos">
+                    <div class="espacio-campos--radio">
                         <label class="campo__label" for="rrss">Redes Sociales</label>
                         <input class="campo__field" type="radio" id="rrss" name="conocido" value="rrss" checked>
                     </div>
-                    <div class="espacio-entre-campos">
+                    <div class="espacio-campos--radio">
                         <label class="campo__label" for="internet">Internet</label>
                         <input class="campo__field" type="radio" name="conocido" id="internet" value="internet">
                     </div>
-                    <div class="espacio-entre-campos">
+                    <div class="espacio-campos--radio">
                         <label class="campo__label" for="prensa">Prensa</label>
                         <input class="campo__field" type="radio" name="conocido" id="prensa" value="prensa">
                     </div>
-                    <div class="espacio-entre-campos">
+                    <div class="espacio-campos--radio">
                         <label class="campo__label" for="publicidad">Publicidad urbana</label>
                         <input class="campo__field" type="radio" name="conocido" id="publicidad" value="publicidad">
                     </div>
-                    <div class="espacio-entre-campos">
+                    <div class="espacio-campos--radio">
                         <label class="campo__label" for="recomendacion">Recomendación Personal</label>
                         <input class="campo__field" type="radio" name="conocido" id="recomendacion" value="recomendacion">
                     </div>
                 </fieldset>
                 <!-- Observaciones -->
-                <div class="espacio-entre-campos">
+                <div class="espacio-campos--observaciones">
                     <label class="campo__label" for="observaciones">Observaciones</label>
                     <textarea class="campo__field" placeholder="Introduce aquí tus observaciones" name="observaciones" id="observaciones"></textarea>
                 </div>
                 <!-- Aceptar términos -->
-                <div class="espacio-entre-campos">
+                <div class="espacio-campos">
                     <label class="campo__label" for="terminos">Al marcar esta casilla, acepta nuestras <a href="" target="_blank" rel="">condiciones</a> de servicio.</label>
                     <input class="campo__field" type="checkbox" name="terminos" id="terminos" required>
                 </div>
                 <!-- Botón Registro -->
-                <div class="espacio-entre-campos">
+                <div class="espacio-campos">
                     <input class="boton" type="submit" value="Registrarse">
                 </div>
 
@@ -341,7 +341,7 @@
         <div class="contenedor">
             <div class="barra">
                 <a class="logo" href="">
-                    <img 
+                    <img src="img/logo_andragos.png" alt="logo_andragos">
                 </a>
 
                 <nav class="navegacion">
