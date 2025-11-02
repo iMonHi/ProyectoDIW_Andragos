@@ -5,7 +5,8 @@
     --primario: #2C3E50;
     --azul_claro: #B9CCE2;
     --blanco: #FAF7F3;
-    --hover: #C17C5B;
+    --blanco-rgb: rgba(255, 255, 255, 0.7);
+    --interact: #C17C5B;
     --verde: #a1c15c;
 }
 
@@ -22,6 +23,7 @@ body {
     background-color: var(--blanco);
 }
 
+
 /* Globales */
 a { text-decoration: none; }
 
@@ -31,10 +33,10 @@ h1, h2, h3, h4 {
     margin: 0;
 }
 
-h1 { font-size: 4.8rem; color: var(--hover);}
+h1 { font-size: 4.8rem; }
 h2 { font-size: 4rem; }
 h3 { font-size: 3.2rem; }
-h4 { font-size: 2.8rem; }
+h4 { font-size: 2.5rem; }
 
 .header, .contenedor, .footer {
     text-align: center;
@@ -43,13 +45,19 @@ h4 { font-size: 2.8rem; }
 
 .boton {
     border: none;
-    background-color: var(--hover);
+    background-color: var(--interact);
     border-radius: 5%;
     padding: 1rem 2rem;
     font-size: 1.7rem;
     font-weight: bold;
     color: var(--blanco);
 }
+
+.boton:hover {
+    background-color: var(--primario);
+    font-weight: bold;
+}
+
 
 /* Utilidades */
 .display-block {
@@ -64,8 +72,14 @@ h4 { font-size: 2.8rem; }
     margin-bottom: 1rem;
 }
 
+
 /* Header y Navegación */
-h1 span { font-size: 2.8rem; color: var(--blanco); }
+.logo { 
+    color: var(--interact);
+    font-weight: bold;
+}
+
+.logo  span { font-size: 2.8rem; color: var(--primario); }
 
 .h3__contacto {
     margin: 2rem;
@@ -76,18 +90,28 @@ h1 span { font-size: 2.8rem; color: var(--blanco); }
 }
 
 .barra {
-    background-color: var(--primario);
+    background-color: var(--blanco);
 }
 
 .navegacion {
     margin: 3rem auto 0 auto;
 }
 
-.navegacion__enlace {
+.navegacion__boton {
     display: block;
     text-align: center;
-    font-size: 1.8rem;
-    color: var(--blanco);
+    font-size: 2rem;
+    color: var(--primario);
+}
+
+.navegacion__boton:hover {
+    background-color: var(--azul_claro);
+    font-weight: bold;
+}
+
+.navegacion__enlace:active {
+    color: (var(--primario));
+    font-weight: bold;
 }
 
 @media (min-width: 768px) {
@@ -95,13 +119,28 @@ h1 span { font-size: 2.8rem; color: var(--blanco); }
         display: flex;
         justify-content:space-around;
         align-items: center;
-        margin-top: 1rem;
+        margin-top: 3rem;
+    }
+
+    .navegacion__boton {
+        width: 100%;
     }
 }
 
+
 /* Footer */
-.navegacion__enlace {
+.footer .barra {
+    background-color: var(--primario);
+}
+
+.footer .navegacion__enlace {
     font-size: small;
+    color: var(--blanco);
+    transition: color 0.5s;
+}
+
+.footer .navegacion__enlace:hover {
+    color: var(--interact);
 }
 
 .logo img {
@@ -109,39 +148,97 @@ h1 span { font-size: 2.8rem; color: var(--blanco); }
     width: 100px;
 }
 
-.navegacion__enlace:last-of-type {
-    padding-bottom: 2rem;
+.footer .navegacion {
+    padding-bottom: 1rem;
 }
 
-/* Formulario */
-.contacto {
-    margin-bottom: 5rem;
+.footer .navegacion {
+    margin-top: 0rem;
 }
 
-.formulario {
-    max-width: 60%;
-    margin: 0 auto;
-    padding: 2rem 4rem;
-    border: 5px solid var(--hover);
+/* PAG. INDEX - Presentación */
+.presentation {
+    position: relative;
+    background-image: url(img/bg_index.png);
+    width: 100%;
+    height: 630px;
+    align-content: center;
+}
+
+.cuadrado {
+    width: 40%;
+    height: 20%;
+    background-color: var(--blanco-rgb);
+    margin: auto;
+    align-content: center;
     border-radius: 2%;
 }
 
+.cuadrado h4 {
+    color: var(--primario);
+    padding-top: 1rem;
+}
+
+@media (max-width: 539px) {
+    .cuadrado h3, h4 {
+        font-size: large;
+        font-weight: bold;
+    }
+
+    .cuadrado {
+        min-width: 180px;
+        min-height: 126px;
+    }
+
+    .presentation {
+        height: 400px;
+    }
+}
+
+
+/* PAG. CONTACTO - Formulario */
+.contenedor {
+    background-image: url(img/bg_index.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.cabecera__formulario, .h3__contacto {
+    padding-top: 2rem;
+    color: var(--blanco);
+}
+
+.formulario {
+    background-color: var(--blanco-rgb);
+    max-width: 60%;
+    margin: 0 auto;
+    padding: 2rem 4rem;
+    border: 5px solid var(--interact);
+    border-radius: 2%;
+}
+
+.contacto {
+    padding-bottom: 5rem;
+}
+
 fieldset {
-    border: 1px solid var(--azul_claro);
+    border: 1px solid var(--blanco);
     border-radius: 2%;
 }
 
 .campo__field {
     height: 2rem;
-    border: 1.5px solid var(--hover);
+    border: 1px solid var(--interact);
     border-radius: 2%;
     padding: 0.3rem;
     background-color: var(--blanco);
     font-family: inherit;
 }
 
-.campo__field--pais {
-    border: 1.5px solid var(--hover);
+.campo__field--provinc {
+    border: 1px solid var(--interact);
+    background-color: var(--blanco);
     border-radius: 2%;
     padding: 0.3rem;
     font-family: inherit;
@@ -157,8 +254,8 @@ fieldset {
 
 @media (min-width: 768px) {
     .espacio-campos--observaciones textarea {
-        width: 450px;
-        height: 100px;
+        width: 350px;
+        height: 50px;
     }
 
     .espacio-campos--observaciones label {
@@ -172,5 +269,10 @@ fieldset {
     .direccion .display__block {
         display: inline-block;
         margin: 0.5rem;
+    }
+
+    #terminos {
+        height: 2rem;
+        width: 2rem;
     }
 }
