@@ -393,7 +393,7 @@ h4 { font-size: 2.5rem; }
 .proyecto_intro {
     background-color: var(--primario);
     color: var(--blanco);
-    height: 630px;;
+    height: 630px;
 }
 
 .reclamo {
@@ -427,6 +427,68 @@ h4 { font-size: 2.5rem; }
 
 .proyecto_intro a {
     color: inherit;
+    display: block;
+}
+
+@media (max-width: 767px) {
+    .proyecto_intro ul {
+        display: none;
+    }
+
+    .proyecto_intro {
+        height: 440px;
+    }
+
+}
+
+/* PAG. PROYECTO -- Sección 1 */
+
+.seccion1_motivacion {
+    width: 80%;
+    height: 630px;
+    margin: 8rem auto;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 4rem;
+    align-items: center;
+}
+
+.seccion1_motivacion img {
+    width: 300px;
+    height: 520px;
+    grid-column: 1;
+}
+
+.seccion1_texto {
+    grid-column: 2;
+}
+
+#motivacion {
+    padding-bottom: 2rem;
+}
+
+
+@media (max-width: 903px) {
+    .seccion1_motivacion img {
+        display: none;
+    }
+
+    .seccion1_motivacion {
+        width: 80%;
+        margin: 8rem auto;
+        display: block;
+        text-align: center;
+    }
+
+    #motivacion {
+        padding-bottom: 4rem;
+    }
+}
+
+/* PAG. PROYECTO -- Sección 2 */
+
+.seccion2_filosofia {
+
 }
 
 
