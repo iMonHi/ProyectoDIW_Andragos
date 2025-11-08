@@ -7,7 +7,9 @@
     --hover-nav: linear-gradient(135deg, #B9CCE2 0%, #D6DDE3 100%);
     --blanco: #FAF7F3;
     --blanco-rgb: rgba(255, 255, 255, 0.7);
-    --interact: #C17C5B;
+    --nar-contrAzClaro: #6F442D;
+    --nar-contrBlanco: #9C6243;
+    --nar-contrAzul: #F29B72; 
     --verde: #a1c15c;
 }
 
@@ -46,17 +48,20 @@ h4 { font-size: 2.5rem; }
 
 .boton {
     border: none;
-    background-color: var(--interact);
+    background-color: var(--nar-contrAzul);
+    border: 3px solid var(--nar-contrBlanco);
     border-radius: 5%;
     padding: 1rem 2rem;
     font-size: 1.7rem;
     font-weight: bold;
-    color: var(--blanco);
-    transition: background-color 0.3s ease;
+    color: #000;
+    transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
 }
 
 .boton:hover {
-    background-color: var(--primario);
+    background-color: var(--nar-contrBlanco);
+    color: var(--blanco);
+    border: 3px solid #704730;
 }
 
 .servicios h2, .nosotros h2 {
@@ -84,7 +89,7 @@ h4 { font-size: 2.5rem; }
 
 /* Header y Navegación */
 .logo { 
-    color: var(--interact);
+    color: var(--nar-contrBlanco);
     font-weight: bold;
 }
 
@@ -148,7 +153,7 @@ h4 { font-size: 2.5rem; }
 }
 
 .footer .navegacion__enlace:hover {
-    color: var(--interact);
+    color: var(--nar-contrAzul);
 }
 
 .logo img {
@@ -184,7 +189,7 @@ h4 { font-size: 2.5rem; }
 }
 
 .cuadrado h4 {
-    color: var(--primario);
+    color: var(--nar-contrBlanco);
     padding-top: 1rem;
 }
 
@@ -213,6 +218,7 @@ h4 { font-size: 2.5rem; }
 
 .proyecto h2 {
     margin: 6rem auto 4rem auto;
+    color: var(--primario);
 }
 
 .objetivo {
@@ -226,7 +232,7 @@ h4 { font-size: 2.5rem; }
 }
 
 .proyecto h4 {
-    color: var(--interact);
+    color: var(--nar-contrBlanco);
 }
 
 .ejes p {
@@ -258,7 +264,7 @@ h4 { font-size: 2.5rem; }
 
 .servicio h4 {
     grid-row: 1;
-    color: var(--interact);
+    color: var(--nar-contrAzul);
 }
 
 .servicio .icono {
@@ -322,6 +328,7 @@ h4 { font-size: 2.5rem; }
 
 .profesional h4 {
     margin-bottom: 2rem;
+    color: var(--nar-contrBlanco);
 }
 
 .profesional img, .servicio img {
@@ -351,6 +358,10 @@ h4 { font-size: 2.5rem; }
     display: block;
 }
 
+.h2__contacto {
+    color: var(--blanco);
+}
+
 .metodo__contacto {
     margin-bottom: 3rem;
 }
@@ -362,7 +373,7 @@ h4 { font-size: 2.5rem; }
 .metodo__contacto .icono svg {
     width: 30px;
     height: 30px;
-    color: var(--interact);
+    color: var(--nar-contrAzul);
 }
 
 .info__contacto {
@@ -375,6 +386,47 @@ h4 { font-size: 2.5rem; }
         display: grid;
         grid-template-columns: repeat(3, 1fr);
     }
+}
+
+
+/* PAG. PROYECTO */
+.proyecto_intro {
+    background-color: var(--primario);
+    color: var(--blanco);
+    height: 630px;;
+}
+
+.reclamo {
+    padding: 9rem 0 4rem 0;
+    color: var(--nar-contrAzul);
+}
+
+.reclamo_sub {
+    width: 70%;
+    margin: auto;
+    font-style: italic;
+    padding-bottom: 6rem;
+    border-bottom: 1px solid var(--azul_claro);
+}
+
+.proyecto_intro ul {
+    list-style: none;
+    font-style: italic;
+    padding: 3rem 0;
+    line-height: 3;
+}
+
+.proyecto_intro li {
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.proyecto_intro li:hover {
+    background-color: var(--azul_claro);
+    color: var(--primario);
+}
+
+.proyecto_intro a {
+    color: inherit;
 }
 
 
@@ -394,6 +446,10 @@ h4 { font-size: 2.5rem; }
 
 .profesional {
     padding: 3% 15% 3% 15%;
+}
+
+.pag__equipo .profesional h4 {
+    color: var(--nar-contrAzClaro);
 }
 
 .curriculum span {
@@ -444,9 +500,14 @@ h4 { font-size: 2.5rem; }
     background-repeat: no-repeat;
 }
 
-.cabecera__formulario, .h3__contacto {
-    padding-top: 2rem;
+.h2__contacto {
+    padding: 4rem 0 2rem 0;
     color: var(--blanco);
+}
+
+.h3__contacto {
+    padding-top: 4rem;
+    color: var(--nar-contrAzul);
 }
 
 .formulario {
@@ -454,7 +515,7 @@ h4 { font-size: 2.5rem; }
     max-width: 60%;
     margin: 0 auto;
     padding: 2rem 4rem;
-    border: 5px solid var(--interact);
+    border: 5px solid var(--nar-contrBlanco);
     border-radius: 2%;
 }
 
@@ -469,7 +530,7 @@ fieldset {
 
 .campo__field {
     height: 2rem;
-    border: 1px solid var(--interact);
+    border: 1px solid var(--nar-contrBlanco);
     border-radius: 2%;
     padding: 0.3rem;
     background-color: var(--blanco);
@@ -477,7 +538,7 @@ fieldset {
 }
 
 .campo__field--provinc {
-    border: 1px solid var(--interact);
+    border: 1px solid var(--nar-contrBlanco);
     background-color: var(--blanco);
     border-radius: 2%;
     padding: 0.3rem;
