@@ -6,7 +6,7 @@
     --azul_claro: #B9CCE2;
     --hover-nav: linear-gradient(135deg, #B9CCE2 0%, #D6DDE3 100%);
     --blanco: #FAF7F3;
-    --blanco-rgb: rgba(255, 255, 255, 0.7);
+    --blanco-rgb: rgba(255, 255, 255, 0.75);
     --nar-contrAzClaro: #6F442D;
     --nar-contrBlanco: #9C6243;
     --nar-contrAzul: #F29B72; 
@@ -84,6 +84,14 @@ h4 { font-size: 2.5rem; }
 
 .profesional-color {
     background-color: var(--azul_claro);
+}
+
+.globales_proyecto {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 
@@ -174,8 +182,11 @@ h4 { font-size: 2.5rem; }
 .presentation {
     position: relative;
     background-image: url(img/bg_index.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     width: 100%;
-    height: 630px;
+    min-height: 100vh;
     align-content: center;
 }
 
@@ -205,7 +216,7 @@ h4 { font-size: 2.5rem; }
     }
 
     .presentation {
-        height: 400px;
+        min-height: 100vh;
     }
 }
 
@@ -237,6 +248,10 @@ h4 { font-size: 2.5rem; }
 
 .ejes p {
     margin: 1rem auto 2.5rem auto;
+}
+
+.ejes {
+    padding: 3rem 0 6rem 0;
 }
 
 /* PAG. INDEX - Profesionales y Servicios */
@@ -364,6 +379,7 @@ h4 { font-size: 2.5rem; }
 
 .metodo__contacto {
     margin-bottom: 3rem;
+    width: 80%;
 }
 
 .contacto p {
@@ -393,7 +409,7 @@ h4 { font-size: 2.5rem; }
 .proyecto_intro {
     background-color: var(--primario);
     color: var(--blanco);
-    height: 630px;
+    min-height: 100vh;
 }
 
 .reclamo {
@@ -430,72 +446,134 @@ h4 { font-size: 2.5rem; }
     display: block;
 }
 
-@media (max-width: 767px) {
-    .proyecto_intro ul {
-        display: none;
-    }
-
-    .proyecto_intro {
-        height: 440px;
-    }
-
-}
-
-/* PAG. PROYECTO -- Sección 1 */
-
-.seccion1_motivacion {
+/* PAG. PROYECTO -- Sección 1  y 3*/
+.seccion1_motivacion, .seccion3_ayuda {
     width: 80%;
-    height: 630px;
-    margin: 8rem auto;
+    min-height: 100vh;
+    margin: 4rem auto 0 auto;
     display: grid;
     grid-template-columns: 1fr 2fr;
     column-gap: 4rem;
-    align-items: center;
+    justify-items: center;
 }
 
 .seccion1_motivacion img {
     width: 300px;
+    height: 550px;
+    grid-column: 1;
+}
+
+.seccion1_motivacion img, .seccion3_ayuda img {
+    width: 370px;
     height: 520px;
     grid-column: 1;
 }
 
-.seccion1_texto {
+.seccion1_texto, .seccion3_texto {
     grid-column: 2;
+    text-align: left;
 }
 
-#motivacion {
+.seccion3_texto ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.seccion3_texto li {
+    list-style: none;
     padding-bottom: 2rem;
 }
 
+#motivacion, #ayuda {
+    padding-bottom: 2rem;
+}
 
 @media (max-width: 903px) {
-    .seccion1_motivacion img {
+    .seccion1_motivacion img, .seccion3_ayuda img {
         display: none;
     }
 
-    .seccion1_motivacion {
-        width: 80%;
-        margin: 8rem auto;
-        display: block;
+    .seccion1_motivacion, .seccion3_ayuda {
+        margin: 6rem auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .seccion1_texto, .seccion3_texto {
         text-align: center;
     }
 
-    #motivacion {
+    #motivacion, #ayuda {
         padding-bottom: 4rem;
     }
 }
 
 /* PAG. PROYECTO -- Sección 2 */
-
 .seccion2_filosofia {
-
+    width: 100%;
+    flex-direction: column;
 }
 
+#filosofia {
+    padding-top: 6rem;
+}
+
+.seccion2_contenido {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.seccion2_filosofia img {
+    width: 85%;
+    height: auto;
+}
+
+.seccion2_texto {
+    display: none;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.seccion2_texto h4 {
+    color: var(--nar-contrAzClaro);
+}
+
+.seccion2_texto li {
+    list-style: none;
+}
+
+@media (max-width: 903px) {
+    .globales_proyecto {
+        min-height: auto;
+        padding: 4rem 0;
+    }
+
+    .seccion2_filosofia img {
+        display: none;
+    }
+
+    .seccion2_texto {
+        display: block;
+        width: 85%;
+    }
+
+    #filosofia {
+    padding: 6rem 0 6rem 0;
+    }
+}
 
 /* PAG. NOSOTROS */
 #titulo__nosotros {
     background-color: var(--azul_claro);
     padding-top: 2rem;
+}
+
+.equipo {
+    padding-bottom: 5rem;
 }
 
 .pag__equipo {
@@ -553,6 +631,72 @@ h4 { font-size: 2.5rem; }
 .especialidad ul {
     padding-left: 0px;
 }
+
+
+/* PÁG. SERVICIOS */
+.contenedor_servicios {
+    background-color: var(--azul_claro);
+    padding: 4rem 0 0 0;
+}
+
+.catalogo_servicios {
+    width: 80%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+}
+
+.tarjeta_servicio {
+    background-color: var(--primario);
+    color: var(--blanco);
+    border-radius: 1rem;
+    padding: 2rem 2.2rem;
+    margin: 1rem auto 4rem auto;
+    grid-template-rows: auto 1fr;
+    gap: 1.5rem;
+    transition: transform 0.25s ease;
+}
+
+.tarjeta_servicio:hover {
+    transform: translateY(-4px);
+}
+
+.tarjeta_servicio img {
+    width: 100%;
+    height: auto;
+    border-radius: 1rem;
+}
+
+.servicio_lista li {
+    padding-bottom: 1.5rem;
+    line-height: 1.5;
+}
+
+.servicio_lista h4 {
+    color: var(--nar-contrAzul);
+}
+
+@media (min-width: 768px) {
+    .catalogo_servicios {
+        grid-template-columns: repeat(3, 3fr);
+        gap: 2.5rem;
+    }
+}
+
+.contacto_servicios {
+    background-color: var(--blanco);
+    padding: 3rem 0;
+}
+
+.contacto_servicios_texto {
+    margin: 3rem auto 6rem auto;
+}
+
+.contacto_servicios h4 {
+    color: var(--nar-contrBlanco);
+}
+
 
 /* PAG. CONTACTO */
 .contenedor {

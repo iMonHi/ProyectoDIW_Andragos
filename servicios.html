@@ -16,7 +16,7 @@
 <body>
     <header class="header">
 
-        <div class="contenedor">
+        <div>
             <div class="barra">
                 <h1>
                     <a class="logo" href="/index.html">
@@ -26,6 +26,9 @@
                 
                 <!-- Navegación principal -->
                 <nav class="navegacion">
+                    <a href="index.html" class="navegacion__enlace">
+                        <div class="navegacion__boton">Inicio</div>
+                    </a>
                     <a href="proyecto.html" class="navegacion__enlace">
                         <div class="navegacion__boton">Proyecto</div>
                     </a>
@@ -44,8 +47,76 @@
         </div>
     </header>
 
-    <main class="contenedor">
+    <main class="contenedor_servicios">
+        <section class="catalogo_servicios">
+            <article class="tarjeta_servicio">
+                <img src="/img/servicio_intervencion.png" alt="imagen decorativa">
+                <div class="servicio_lista">
+                    <h4 class="centrar-texto">Usuarios</h4>
+                    <ul>
+                        <li>Intervención psicopedagógica individual o grupal.</li>
+                        <li>Talleres de competencias profesionales y para el empleo.</li>
+                        <li>Apoyo académico en formación para adultos.</li>
+                    </ul>
+                </div>
+            </article>
+                
+            <article class="tarjeta_servicio">
+                <img src="/img/servicio_familia.png" alt="imagen decorativa">
+                <div class="servicio_lista">
+                    <h4 class="centrar-texto">Familias</h4>
+                    <ul>
+                        <li>Talleres de psicoeducación.</li>
+                        <li>Acompañamiento emocional a familiares de usuarios.</li>
+                        <li>Talleres de competencias y pautas de manejo de usuarios.</li>
+                    </ul>
+            </article>
 
+            <article class="tarjeta_servicio">
+                <img src="/img/servicio_formacion.png" alt="imagen decorativa">
+                <div class="servicio_lista">
+                    <h4 class="centrar-texto">Centros y particulares</h4>
+                    <ul>
+                        <li>Formación a centros educativos para adultos.</li>
+                        <li>Talleres presenciales para centros y empresas.</li>
+                        <li>Formación online y asincrónica para interesados/as.</li>
+                    </ul>
+            </article>
+        </section>
+
+        <section class="contacto_servicios centrar-texto">
+            <h4>¿Quieres conocer más sobre estos servicios?</h4>
+            <p class="contacto_servicios_texto">Contacta con nosotros sin compromiso.</p>
+            <div class="grid__contacto">
+                <!-- Grid contactos -->
+                <div class="metodo__contacto">
+                    <div class="icono">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                        <path d="M10.5 18.75a.75.75 0 0 0 0 1.5h3a.75.75 0 0 0 0-1.5h-3Z" />
+                        <path fill-rule="evenodd" d="M8.625.75A3.375 3.375 0 0 0 5.25 4.125v15.75a3.375 3.375 0 0 0 3.375 3.375h6.75a3.375 3.375 0 0 0 3.375-3.375V4.125A3.375 3.375 0 0 0 15.375.75h-6.75ZM7.5 4.125C7.5 3.504 8.004 3 8.625 3H9.75v.375c0 .621.504 1.125 1.125 1.125h2.25c.621 0 1.125-.504 1.125-1.125V3h1.125c.621 0 1.125.504 1.125 1.125v15.75c0 .621-.504 1.125-1.125 1.125h-6.75A1.125 1.125 0 0 1 7.5 19.875V4.125Z" clip-rule="evenodd" />
+                        </svg>
+                    </div>
+                    <p class="info__contacto">+34 364000999</p>
+                </div>
+                <div class="metodo__contacto">
+                    <div class="icono">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                        <path d="M1.5 8.67v8.58a3 3 0 0 0 3 3h15a3 3 0 0 0 3-3V8.67l-8.928 5.493a3 3 0 0 1-3.144 0L1.5 8.67Z" />
+                        <path d="M22.5 6.908V6.75a3 3 0 0 0-3-3h-15a3 3 0 0 0-3 3v.158l9.714 5.978a1.5 1.5 0 0 0 1.572 0L22.5 6.908Z" />
+                        </svg>
+                    </div>
+                    <p class="info__contacto">andragos@pedagogia.es</p>
+                </div>
+                <div class="metodo__contacto">
+                    <div class="icono">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                        <path fill-rule="evenodd" d="m11.54 22.351.07.04.028.016a.76.76 0 0 0 .723 0l.028-.015.071-.041a16.975 16.975 0 0 0 1.144-.742 19.58 19.58 0 0 0 2.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 0 0-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 0 0 2.682 2.282 16.975 16.975 0 0 0 1.145.742ZM12 13.5a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" clip-rule="evenodd" />
+                        </svg>
+                    </div>
+                    <p class="info__contacto">Avda. Blasco Ibáñez 9, bajo. Valencia (4610, Valencia)</p>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer class="footer">
