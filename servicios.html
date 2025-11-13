@@ -2,8 +2,10 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Descubre los servicios que ofrecemos para ayudarte a alcanzar tus objetivos.">
+    <link rel="icon" href="img/favicon.png" type="image/png">
+    <title>Servicios</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,11 +20,11 @@
 
         <div>
             <div class="barra">
-                <h1>
+                <p>
                     <a class="logo" href="/index.html">
                         Andragos<span> Centro de Psicopedagogía para Adultos</span>
                     </a>
-                </h1>
+                </p>
                 
                 <!-- Navegación principal -->
                 <nav class="navegacion">
@@ -48,11 +50,12 @@
     </header>
 
     <main class="contenedor_servicios">
+        <h1 class="h1__catalogo centrar-texto">¿Qué ofrecemos en nuestro centro?</h1>
         <section class="catalogo_servicios">
             <article class="tarjeta_servicio">
-                <img src="/img/servicio_intervencion.png" alt="imagen decorativa">
+                <img loading="lazy" src="/img/servicio_intervencion.png" alt="imagen decorativa">
                 <div class="servicio_lista">
-                    <h4 class="centrar-texto">Usuarios</h4>
+                    <h2 class="centrar-texto">Usuarios</h2>
                     <ul>
                         <li>Intervención psicopedagógica individual o grupal.</li>
                         <li>Talleres de competencias profesionales y para el empleo.</li>
@@ -62,9 +65,9 @@
             </article>
                 
             <article class="tarjeta_servicio">
-                <img src="/img/servicio_familia.png" alt="imagen decorativa">
+                <img loading="lazy" src="/img/servicio_familia.png" alt="imagen decorativa">
                 <div class="servicio_lista">
-                    <h4 class="centrar-texto">Familias</h4>
+                    <h2 class="centrar-texto">Familias</h2>
                     <ul>
                         <li>Talleres de psicoeducación.</li>
                         <li>Acompañamiento emocional a familiares de usuarios.</li>
@@ -73,9 +76,9 @@
             </article>
 
             <article class="tarjeta_servicio">
-                <img src="/img/servicio_formacion.png" alt="imagen decorativa">
+                <img loading="lazy" src="/img/servicio_formacion.png" alt="imagen decorativa">
                 <div class="servicio_lista">
-                    <h4 class="centrar-texto">Centros y particulares</h4>
+                    <h2 class="centrar-texto">Centros y particulares</h2>
                     <ul>
                         <li>Formación a centros educativos para adultos.</li>
                         <li>Talleres presenciales para centros y empresas.</li>
@@ -85,27 +88,32 @@
         </section>
 
         <section class="contacto_servicios centrar-texto">
+            
+            
+
+            <!-- SUSTITUIR POR CURSOS QUE SE MUEVEN INTERACTIVOS
+
             <h4>¿Quieres conocer más sobre estos servicios?</h4>
             <p class="contacto_servicios_texto">Contacta con nosotros sin compromiso.</p>
             <div class="grid__contacto">
-                <!-- Grid contactos -->
-                <div class="metodo__contacto">
+
+                <div class="metodo__contacto contacto--negro">
                     <div class="icono">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
                         <path d="M10.5 18.75a.75.75 0 0 0 0 1.5h3a.75.75 0 0 0 0-1.5h-3Z" />
                         <path fill-rule="evenodd" d="M8.625.75A3.375 3.375 0 0 0 5.25 4.125v15.75a3.375 3.375 0 0 0 3.375 3.375h6.75a3.375 3.375 0 0 0 3.375-3.375V4.125A3.375 3.375 0 0 0 15.375.75h-6.75ZM7.5 4.125C7.5 3.504 8.004 3 8.625 3H9.75v.375c0 .621.504 1.125 1.125 1.125h2.25c.621 0 1.125-.504 1.125-1.125V3h1.125c.621 0 1.125.504 1.125 1.125v15.75c0 .621-.504 1.125-1.125 1.125h-6.75A1.125 1.125 0 0 1 7.5 19.875V4.125Z" clip-rule="evenodd" />
                         </svg>
                     </div>
-                    <p class="info__contacto">+34 364000999</p>
+                    <p class="info__contacto"><a href="tel:">+34 364000999</a></p>
                 </div>
-                <div class="metodo__contacto">
+                <div class="metodo__contacto contacto--negro">
                     <div class="icono">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
                         <path d="M1.5 8.67v8.58a3 3 0 0 0 3 3h15a3 3 0 0 0 3-3V8.67l-8.928 5.493a3 3 0 0 1-3.144 0L1.5 8.67Z" />
                         <path d="M22.5 6.908V6.75a3 3 0 0 0-3-3h-15a3 3 0 0 0-3 3v.158l9.714 5.978a1.5 1.5 0 0 0 1.572 0L22.5 6.908Z" />
                         </svg>
                     </div>
-                    <p class="info__contacto">andragos@pedagogia.es</p>
+                    <p class="info__contacto"><a href="mailto:mh92_isabel@gmail.com">andragos@pedagogia.es</a></p>
                 </div>
                 <div class="metodo__contacto">
                     <div class="icono">
@@ -116,14 +124,14 @@
                     <p class="info__contacto">Avda. Blasco Ibáñez 9, bajo. Valencia (4610, Valencia)</p>
                 </div>
             </div>
-        </section>
+        </section>  -->
     </main>
 
     <footer class="footer">
         <div class="contenedor">
             <div class="barra">
                 <a class="logo" href="index.html">
-                    <img src="img/logo_andragos.png" alt="logo_andragos">
+                    <img loading="lazy" src="img/logo_andragos.png" alt="logo_andragos">
                 </a>
 
                 <nav class="navegacion">

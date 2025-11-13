@@ -2,8 +2,10 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ponte en contacto con nosotros.">
+    <link rel="icon" href="img/favicon.png" type="image/png">
+    <title>Contacto</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,11 +20,11 @@
 
         <div class="contenedor">
             <div class="barra">
-                <h1>
+                <p>
                     <a class="logo" href="/index.html">
                         Andragos<span> Centro de Psicopedagogía para Adultos</span>
                     </a>
-                </h1>
+                </p>
                 
                 <!-- Navegación principal -->
                 <nav class="navegacion">
@@ -47,136 +49,170 @@
         </div>
     </header>
 
-    <main class="contenedor">
+    <main>
+        <section class="contacto contenedor__contacto">
+            <div class="cabecera__formulario centrar-texto">
+                <h1 class="h1__contacto">¿Tienes alguna duda?</h1>
+                <p>Ponte en contacto con nosotros a través del formulario</p>
+            </div>
 
-        <div class="cabecera__formulario">
-            <h3 class="h3__contacto">¿Tienes alguna duda?</h2>
-            <p>Ponte en contacto con nosotros a través del formulario</p>
-        </div>
+            <h2 class="centrar-texto h2__contacto"><span>Contacto</span></h2>
 
-        <h3 class="centrar-texto h3__contacto"><span>Contacto</span></h3>
+            <div class="contacto">
 
-        <div class="contacto">
+                <form class="formulario centrar-texto">
+                    <!-- Nombre -->
+                    <div class="espacio-campos">
+                        <label class="campo__label" for="nombre">Nombre y apellidos</label>
+                        <input class="campo__field" type="text" placeholder="Tu Nombre y apellidos" name="nombre" id="nombre" required>
+                    </div>
 
-            <form class="formulario centrar-texto">
-                <!-- Nombre -->
-                <div class="espacio-campos">
-                    <label class="campo__label" for="nombre">Nombre y apellidos</label>
-                    <input class="campo__field" type="text" placeholder="Tu Nombre y apellidos" name="nombre" id="nombre" required>
+                    <!-- Email -->
+                    <div class="espacio-campos">
+                        <label class="campo__label" for="email">Email</label>
+                        <input class="campo__field" type="email" placeholder="Tu email" name="email" id="email" required>
+                    </div>
+                    <!-- Telf -->
+                    <div class="espacio-campos">
+                        <label class="campo__label" for="telf">Teléfono</label>
+                        <input class="campo__field" type="tel" placeholder="Tu teléfono" name="telf" id="telf">
+                    </div>
+
+                    <!-- Dirección -->
+                    <fieldset class="espacio-campos centrar-texto">
+                        <legend>Dirección</legend>
+                        <div class="direccion">
+
+                            <div class="display-block espacio-campos">
+                                <label class="campo__label" for="calle">Dirección</label>
+                                <input class="campo__field" type="text" placeholder="Calle, nº, pta" name="calle" id="calle">
+                            </div>
+                            <div class="display__block espacio-campos">
+                                <label class="campo__label" for="localidad">Localidad</label>
+                                <input class="campo__field" type="text" placeholder="Localidad" name="localidad" id="localidad">
+                            </div>
+                            <div class="display__block espacio-campos">
+                                <label class="campo__label" for="dir_postal">Código postal</label>
+                                <input class="campo__field" type="text" pattern="^\d{5}$" placeholder="Código postal" name="dir_postal" id="dir_postal">
+                            </div>
+                            <div class="display__block espacio-campos">
+                                <label class="campo__label" for="provincia">Provincia</label>
+                                <select class="campo__field--provinc" name="provincia" id="provincia">
+                                    <option data-postal="01" value="Alava/Araba">Álava</option>
+                                    <option data-postal="02" value="Albacete">Albacete</option>
+                                    <option data-postal="03" value="Alicante">Alicante</option>
+                                    <option data-postal="04" value="Almeria">Almería</option>
+                                    <option data-postal="05" value="Avila">Avila</option>
+                                    <option data-postal="06" value="Badajoz">Badajoz</option>
+                                    <option data-postal="07" value="Islas Baleares">Islas Baleares</option>
+                                    <option data-postal="08" value="Barcelona">Barcelona</option>
+                                    <option data-postal="09" value="Burgos">Burgos</option>
+                                    <option data-postal="10" value="Caceres">Cáceres</option>
+                                    <option data-postal="11" value="Cadiz">Cádiz</option>
+                                    <option data-postal="12" value="Castellon">Castellón</option>
+                                    <option data-postal="13" value="Ciudad Real">Ciudad Real</option>
+                                    <option data-postal="14" value="Cordoba">Córdoba</option>
+                                    <option data-postal="15" value="A Coruna/La Coruna">La Coruña</option>
+                                    <option data-postal="16" value="Cuenca">Cuenca</option>
+                                    <option data-postal="17" value="Gerona/Girona">Gerona/Girona</option>
+                                    <option data-postal="18" value="Granada">Granada</option>
+                                    <option data-postal="19" value="Guadalajara">Guadalajara</option>
+                                    <option data-postal="20" value="Gipuzkoa/Guipuzcoa">Guipuzcoa</option>
+                                    <option data-postal="21" value="Huelva">Huelva</option>
+                                    <option data-postal="22" value="Huesca">Huesca</option>
+                                    <option data-postal="23" value="Jaen">Jaen</option>
+                                    <option data-postal="24" value="Leon">León</option>
+                                    <option data-postal="25" value="Lerida/Lleida">Lérida</option>
+                                    <option data-postal="26" value="La Rioja">La Rioja</option>
+                                    <option data-postal="27" value="Lugo">Lugo</option>
+                                    <option data-postal="28" value="Madrid">Madrid</option>
+                                    <option data-postal="29" value="Malaga">Málaga</option>
+                                    <option data-postal="30" value="Murcia">Murcia</option>
+                                    <option data-postal="31" value="Navarra">Navarra</option>
+                                    <option data-postal="32" value="Orense/Ourense">Orense</option>
+                                    <option data-postal="33" value="Asturias">Asturias</option>
+                                    <option data-postal="34" value="Palencia">Palencia</option>
+                                    <option data-postal="35" value="Las Palmas">Las Palmas</option>
+                                    <option data-postal="36" value="Pontevedra">Pontevedra</option>
+                                    <option data-postal="37" value="Salamanca">Salamanca</option>
+                                    <option data-postal="38" value="S.C.Tenerife">S.C.Tenerife</option>
+                                    <option data-postal="39" value="Cantabria">Cantabria</option>
+                                    <option data-postal="40" value="Segovia">Segovia</option>
+                                    <option data-postal="41" value="Sevilla">Sevilla</option>
+                                    <option data-postal="42" value="Soria">Soria</option>
+                                    <option data-postal="43" value="Tarragona">Tarragona</option>
+                                    <option data-postal="44" value="Teruel">Teruel</option>
+                                    <option data-postal="45" value="Toledo">Toledo</option>
+                                    <option data-postal="46" value="Valencia" selected>Valencia</option>
+                                    <option data-postal="47" value="Valladolid">Valladolid</option>
+                                    <option data-postal="48" value="Bizkaia/Vizcaya">Vizcaya</option>
+                                    <option data-postal="49" value="Zamora">Zamora</option>
+                                    <option data-postal="50" value="Zaragoza">Zaragoza</option>
+                                    <option data-postal="51" value="Ceuta">Ceuta</option>
+                                    <option data-postal="52" value="Melilla">Melilla</option>
+                                </select>
+                            </div>    
+                        </div>        
+                    </fieldset>
+
+                    <!-- Observaciones -->
+                    <div class="espacio-campos--observaciones">
+                        <label class="campo__label" for="observaciones">Observaciones</label>
+                        <textarea class="campo__field" placeholder="Introduce aquí tus observaciones" name="observaciones" id="observaciones"></textarea>
+                    </div>
+                    <!-- Aceptar términos -->
+                    <div class="espacio-campos">
+                        <label class="campo__label" for="terminos">Al marcar esta casilla, acepta nuestras <a href="" target="_blank" rel="">condiciones</a> de servicio.</label>
+                        <input class="campo__field" type="checkbox" name="terminos" id="terminos" required>
+                    </div>
+                    <!-- Botón Registro -->
+                    <div class="espacio-campos">
+                        <input class="boton" type="submit" value="Registrarse">
+                    </div>
+                </form>
+            </div>
+
+            <p class="contacto--blanco centrar-texto">O si lo prefieres, contacta con nosotros a través de los siguientes medios</p>
+
+            <div class="grid__contacto">
+                <!-- Grid contactos -->
+                <div class="metodo__contacto contacto--blanco">
+                    <div class="icono">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                        <path d="M10.5 18.75a.75.75 0 0 0 0 1.5h3a.75.75 0 0 0 0-1.5h-3Z" />
+                        <path fill-rule="evenodd" d="M8.625.75A3.375 3.375 0 0 0 5.25 4.125v15.75a3.375 3.375 0 0 0 3.375 3.375h6.75a3.375 3.375 0 0 0 3.375-3.375V4.125A3.375 3.375 0 0 0 15.375.75h-6.75ZM7.5 4.125C7.5 3.504 8.004 3 8.625 3H9.75v.375c0 .621.504 1.125 1.125 1.125h2.25c.621 0 1.125-.504 1.125-1.125V3h1.125c.621 0 1.125.504 1.125 1.125v15.75c0 .621-.504 1.125-1.125 1.125h-6.75A1.125 1.125 0 0 1 7.5 19.875V4.125Z" clip-rule="evenodd" />
+                        </svg>
+                    </div>
+                    <p class="info__contacto"><a href="tel:">+34 364000999</a></p>
                 </div>
-
-                <!-- Email -->
-                <div class="espacio-campos">
-                    <label class="campo__label" for="email">Email</label>
-                    <input class="campo__field" type="email" placeholder="Tu email" name="email" id="email" required>
+                <div class="metodo__contacto contacto--blanco">
+                    <div class="icono">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                        <path d="M1.5 8.67v8.58a3 3 0 0 0 3 3h15a3 3 0 0 0 3-3V8.67l-8.928 5.493a3 3 0 0 1-3.144 0L1.5 8.67Z" />
+                        <path d="M22.5 6.908V6.75a3 3 0 0 0-3-3h-15a3 3 0 0 0-3 3v.158l9.714 5.978a1.5 1.5 0 0 0 1.572 0L22.5 6.908Z" />
+                        </svg>
+                    </div>
+                    <p class="info__contacto"><a href="mailto:mh92_isabel@gmail.com">andragos@pedagogia.es</a></p>
                 </div>
-                <!-- Telf -->
-                <div class="espacio-campos">
-                    <label class="campo__label" for="telf">Teléfono</label>
-                    <input class="campo__field" type="tel" placeholder="Tu teléfono" name="telf" id="telf">
+                <div class="metodo__contacto contacto--blanco">
+                    <div class="icono">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                        <path fill-rule="evenodd" d="m11.54 22.351.07.04.028.016a.76.76 0 0 0 .723 0l.028-.015.071-.041a16.975 16.975 0 0 0 1.144-.742 19.58 19.58 0 0 0 2.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 0 0-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 0 0 2.682 2.282 16.975 16.975 0 0 0 1.145.742ZM12 13.5a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" clip-rule="evenodd" />
+                        </svg>
+                    </div>
+                    <p class="info__contacto">Avda. Blasco Ibáñez 9, bajo. Valencia (4610, Valencia)</p>
                 </div>
+            </div>   
 
-                <!-- Dirección -->
-                <fieldset class="espacio-campos ">
-                    <legend>Dirección</legend>
-                    <div class="direccion">
-
-                        <div class="display__block espacio-campos">
-                            <label class="campo__label" for="calle">Dirección</label>
-                            <input class="campo__field" type="text" placeholder="Calle, nº, pta" name="calle" id="calle">
-                        </div>
-                        <div class="display__block espacio-campos">
-                            <label class="campo__label" for="localidad">Localidad</label>
-                            <input class="campo__field" type="text" placeholder="Localidad" name="localidad" id="localidad">
-                        </div>
-                        <div class="display__block espacio-campos">
-                            <label class="campo__label" for="dir_postal">Código postal</label>
-                            <input class="campo__field" type="text" pattern="^\d{5}$" placeholder="Código postal" name="dir_postal" id="dir_postal">
-                        </div>
-                        <div class="display__block espacio-campos">
-                            <label class="campo__label" for="provincia">Provincia</label>
-                            <select class="campo__field--provinc" name="provincia" id="provincia">
-                                <option data-postal="01" value="Alava/Araba">Álava</option>
-                                <option data-postal="02" value="Albacete">Albacete</option>
-                                <option data-postal="03" value="Alicante">Alicante</option>
-                                <option data-postal="04" value="Almeria">Almería</option>
-                                <option data-postal="05" value="Avila">Avila</option>
-                                <option data-postal="06" value="Badajoz">Badajoz</option>
-                                <option data-postal="07" value="Islas Baleares">Islas Baleares</option>
-                                <option data-postal="08" value="Barcelona">Barcelona</option>
-                                <option data-postal="09" value="Burgos">Burgos</option>
-                                <option data-postal="10" value="Caceres">Cáceres</option>
-                                <option data-postal="11" value="Cadiz">Cádiz</option>
-                                <option data-postal="12" value="Castellon">Castellón</option>
-                                <option data-postal="13" value="Ciudad Real">Ciudad Real</option>
-                                <option data-postal="14" value="Cordoba">Córdoba</option>
-                                <option data-postal="15" value="A Coruna/La Coruna">La Coruña</option>
-                                <option data-postal="16" value="Cuenca">Cuenca</option>
-                                <option data-postal="17" value="Gerona/Girona">Gerona/Girona</option>
-                                <option data-postal="18" value="Granada">Granada</option>
-                                <option data-postal="19" value="Guadalajara">Guadalajara</option>
-                                <option data-postal="20" value="Gipuzkoa/Guipuzcoa">Guipuzcoa</option>
-                                <option data-postal="21" value="Huelva">Huelva</option>
-                                <option data-postal="22" value="Huesca">Huesca</option>
-                                <option data-postal="23" value="Jaen">Jaen</option>
-                                <option data-postal="24" value="Leon">León</option>
-                                <option data-postal="25" value="Lerida/Lleida">Lérida</option>
-                                <option data-postal="26" value="La Rioja">La Rioja</option>
-                                <option data-postal="27" value="Lugo">Lugo</option>
-                                <option data-postal="28" value="Madrid">Madrid</option>
-                                <option data-postal="29" value="Malaga">Málaga</option>
-                                <option data-postal="30" value="Murcia">Murcia</option>
-                                <option data-postal="31" value="Navarra">Navarra</option>
-                                <option data-postal="32" value="Orense/Ourense">Orense</option>
-                                <option data-postal="33" value="Asturias">Asturias</option>
-                                <option data-postal="34" value="Palencia">Palencia</option>
-                                <option data-postal="35" value="Las Palmas">Las Palmas</option>
-                                <option data-postal="36" value="Pontevedra">Pontevedra</option>
-                                <option data-postal="37" value="Salamanca">Salamanca</option>
-                                <option data-postal="38" value="S.C.Tenerife">S.C.Tenerife</option>
-                                <option data-postal="39" value="Cantabria">Cantabria</option>
-                                <option data-postal="40" value="Segovia">Segovia</option>
-                                <option data-postal="41" value="Sevilla">Sevilla</option>
-                                <option data-postal="42" value="Soria">Soria</option>
-                                <option data-postal="43" value="Tarragona">Tarragona</option>
-                                <option data-postal="44" value="Teruel">Teruel</option>
-                                <option data-postal="45" value="Toledo">Toledo</option>
-                                <option data-postal="46" value="Valencia" selected>Valencia</option>
-                                <option data-postal="47" value="Valladolid">Valladolid</option>
-                                <option data-postal="48" value="Bizkaia/Vizcaya">Vizcaya</option>
-                                <option data-postal="49" value="Zamora">Zamora</option>
-                                <option data-postal="50" value="Zaragoza">Zaragoza</option>
-                                <option data-postal="51" value="Ceuta">Ceuta</option>
-                                <option data-postal="52" value="Melilla">Melilla</option>
-                            </select>
-                        </div>    
-                    </div>        
-                </fieldset>
-
-                <!-- Observaciones -->
-                <div class="espacio-campos--observaciones">
-                    <label class="campo__label" for="observaciones">Observaciones</label>
-                    <textarea class="campo__field" placeholder="Introduce aquí tus observaciones" name="observaciones" id="observaciones"></textarea>
-                </div>
-                <!-- Aceptar términos -->
-                <div class="espacio-campos">
-                    <label class="campo__label" for="terminos">Al marcar esta casilla, acepta nuestras <a href="" target="_blank" rel="">condiciones</a> de servicio.</label>
-                    <input class="campo__field" type="checkbox" name="terminos" id="terminos" required>
-                </div>
-                <!-- Botón Registro -->
-                <div class="espacio-campos">
-                    <input class="boton" type="submit" value="Registrarse">
-                </div>
-
-            </form>
-        </div>
+        </section>
     </main>
 
     <footer class="footer">
-        <div class="contenedor">
+        <div class="contenedor__contacto">
             <div class="barra">
                 <a class="logo" href="index.html">
-                    <img src="img/logo_andragos.png" alt="logo_andragos">
+                    <img loading="lazy"
+                    src="img/logo_andragos.png" alt="logo_andragos">
                 </a>
 
                 <nav class="navegacion">
