@@ -44,7 +44,7 @@ h2 { font-size: 3.4rem; }
 h3 { font-size: 2.8rem; }
 h4 { font-size: 2rem; }
 
-.contenedor_formulario { text-align: center; }
+.formulario__contenedor { text-align: center; }
 
 .header, .footer {
     text-align: center;
@@ -80,10 +80,6 @@ section {
 
 
 /* Utilidades */
-.display-block {
-    display: block;
-}
-
 .justificar-centro {
     display: flex;
     justify-content: center;
@@ -99,31 +95,26 @@ section {
     margin-bottom: 1rem;
 }
 
-.profesional-color {
+.profesional--color {
     background-color: var(--azul_claro);
 }
 
-.globales_proyecto {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+.color--blanco, .color--blanco a {
+    color: var(--blanco);
 }
 
 
 /* Header y Navegación */
-.titulo_cabecera { 
+.header__titulo { 
     color: var(--nar-contrBlanco);
     font-weight: bold;
     font-size: 2.8rem;
     line-height: 0.8;
 }
 
-.titulo_cabecera span { font-size: 2rem; color: var(--primario); }
+.header__titulo span { font-size: 2rem; color: var(--primario); }
 
-.cabecera__formulario p {
+.formulario__header p {
     margin: auto;
 }
 
@@ -290,7 +281,7 @@ section {
     color: var(--primario);
 }
 
-.ejes_andragos p {
+.empresa__ejes p {
     margin: 0.5rem auto 2rem auto;
 }
 
@@ -325,7 +316,7 @@ section {
     padding-top: 2rem;
 }
 
-.icono_servicio {
+.servicio__icono {
     display: none;
     width: 70px;
     height: 70px;
@@ -336,7 +327,7 @@ section {
     align-items: center;
 }
 
-.icono_servicio svg {
+.servicio__icono svg {
     width: 40px;
     height: 40px;
 }
@@ -352,7 +343,7 @@ section {
         column-gap: 10%;
     }
 
-    .icono_servicio {
+    .servicio__icono {
         display: flex;
     }
 
@@ -379,11 +370,11 @@ section {
     margin: auto;
 }
 
-.index__profesional {
+.profesional__tarjeta {
     margin: 2rem auto;
 }
 
-.index__profesional img, .profesional img { /* + img de pág. nosotros.html*/
+.profesional__tarjeta img, .profesional img { /* + img de pág. nosotros.html*/
     width: 120px;
     height: 120px;
     border-radius: 50%;
@@ -403,24 +394,24 @@ section {
         margin: auto;
     }
 
-    .index__profesional {
+    .profesional__tarjeta {
         display: grid;
         grid-template-columns: 120px 1fr;
         align-items: center;
         column-gap: 5rem;
     }
 
-    .index__profesional h3 {
+    .profesional__tarjeta h3 {
         grid-column: 1;
         font-size: 2.3rem;
         padding-bottom: 1rem;
     }
 
-    .index__profesional img {
+    .profesional__tarjeta img {
         grid-column: 1;
       }
 
-    .index__profesional p {
+    .profesional__tarjeta p {
         grid-column: 2;
         text-align: left;
     }
@@ -444,11 +435,11 @@ section {
     padding: 4rem 0 3rem 0;
 }
 
-.cabecera__formulario p {
+.formulario__header p {
     color: var(--blanco);
 }
 
-.h2__contacto {
+.contacto__titulo {
     padding: 6rem 0 2rem 0;
     color: var(--nar-contrAzul);
 }
@@ -540,17 +531,9 @@ fieldset {
     width: 70%;
 }
 
-.contacto--blanco p, .contacto--blanco a, .contacto--blanco {
-    color: var(--blanco);
-}
-
-.contacto--negro p, .contacto--negro a {
-    color: black;
-}
-
 
 /* PAG. PROYECTO -- Intro nav secundaria*/
-.proyecto_intro {
+.proyecto__intro {
     background-color: var(--primario);
     color: var(--blanco);
     min-height: 100vh;
@@ -561,7 +544,7 @@ fieldset {
     color: var(--nar-contrAzul);
 }
 
-.reclamo_sub {
+.reclamo_subtitulo {
     width: 70%;
     margin: auto;
     font-style: italic;
@@ -569,29 +552,38 @@ fieldset {
     border-bottom: 1px solid var(--azul_claro);
 }
 
-.proyecto_intro ul {
+.proyecto__intro ul {
     list-style: none;
     font-style: italic;
     padding: 3rem 0;
     line-height: 3;
 }
 
-.proyecto_intro li {
+.proyecto__intro li {
     transition: color 0.3s ease, background-color 0.3s ease;
 }
 
-.proyecto_intro li:hover {
+.proyecto__intro li:hover {
     background-color: var(--azul_claro);
     color: var(--primario);
 }
 
-.proyecto_intro a {
+.proyecto__intro a {
     color: inherit;
     display: block;
 }
 
 /* PAG. PROYECTO -- Sección 1  y 3*/
-.contenedor_motivacion, .contenedor_ayuda {
+.proyecto__motivacion {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.proyecto__motivacion-contenedor, .proyecto__ayuda-contenedor {
     width: 80%;
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -599,30 +591,24 @@ fieldset {
     justify-items: center;
 }
 
-.seccion1_motivacion img {
-    width: 300px;
-    height: 550px;
-    grid-column: 1;
-}
-
-.seccion1_motivacion img, .seccion3_ayuda img {
+.proyecto__motivacion img, .proyecto__ayuda img {
     width: 370px;
     height: 520px;
     grid-column: 1;
 }
 
-.seccion1_texto, .seccion3_texto {
+.proyecto__motivacion-texto, .proyecto__ayuda-texto {
     grid-column: 2;
     text-align: left;
 }
 
-.seccion3_texto ul {
+.proyecto__ayuda-texto ul {
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
-.seccion3_texto li {
+.proyecto__ayuda-textoo li {
     list-style: none;
     padding-bottom: 2rem;
 }
@@ -632,17 +618,17 @@ fieldset {
 }
 
 @media (max-width: 903px) {
-    .seccion1_motivacion img, .seccion3_ayuda img {
+    .proyecto__motivacion img, .proyecto__ayuda img {
         display: none;
     }
 
-    .seccion1_motivacion, .seccion3_ayuda {
+    .proyecto__motivacion, .proyecto__ayuda {
         margin: 6rem auto;
         display: flex;
         flex-direction: column;
     }
 
-    .seccion1_texto, .seccion3_texto {
+    .proyecto__motivacion-texto, .proyecto__ayuda-texto {
         text-align: center;
     }
 
@@ -652,7 +638,7 @@ fieldset {
 }
 
 /* PAG. PROYECTO -- Sección 2 */
-.seccion2_filosofia {
+.proyecto__filosofia {
     width: 100%;
     flex-direction: column;
 }
@@ -661,7 +647,11 @@ fieldset {
     padding-top: 6rem;
 }
 
-.seccion2_contenido {
+.proyecto__filosofia-fondo {
+    background-color: var(--azul_claro);
+}
+
+.proyecto__contenidos {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -669,36 +659,36 @@ fieldset {
     gap: 2rem;
 }
 
-.seccion2_filosofia img {
+.proyecto__filosofia img {
     width: 85%;
     height: auto;
 }
 
-.seccion2_texto {
+.proyecto__filosofia-texto {
     display: none;
     margin: 0 auto;
     text-align: left;
 }
 
-.seccion2_texto h4 {
+.proyecto__filosofia-texto h4 {
     color: var(--nar-contrAzClaro);
 }
 
-.seccion2_texto li {
+.proyecto__filosofia-texto li {
     list-style: none;
 }
 
 @media (max-width: 903px) {
-    .globales_proyecto {
+    .proyecto__seccion {
         min-height: auto;
         padding: 4rem 0;
     }
 
-    .seccion2_filosofia img {
+    .proyecto__filosofia img {
         display: none;
     }
 
-    .seccion2_texto {
+    .proyecto__filosofia-texto {
         display: block;
         width: 85%;
     }
@@ -718,7 +708,7 @@ fieldset {
     padding-bottom: 5rem;
 }
 
-.pag__equipo {
+.equipo {
     display: grid;
     grid-template-rows: repeat(4, 1fr);
     row-gap: 4rem;
@@ -730,7 +720,7 @@ fieldset {
     padding: 3% 15% 3% 15%;
 }
 
-.pag__equipo .profesional h4 {
+.equipo .profesional h4 {
     color: var(--nar-contrAzClaro);
 }
 
@@ -749,13 +739,13 @@ fieldset {
     margin: 6rem auto;
 }
 
-.perfil__prof {
+.profesional__perfil {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 3rem;
 }
 
-.perfil__prof > *:nth-child(2n) {
+.profesional__perfil > *:nth-child(2n) {
     border-left: 1px solid var(--primario);
     padding-left: 3rem;
 }
@@ -764,7 +754,7 @@ fieldset {
     text-align: right;
 }
 
-.perfil__prof li {
+.profesional__perfil li {
     list-style: none;
     line-height: 1.5;
     margin-bottom: 1.7rem;
@@ -776,11 +766,11 @@ fieldset {
 
 
 /* PÁG. SERVICIOS */
-.contenedor_servicios {
+.contenedor__servicios {
     background-color: var(--primario); /* No tocar, mismo en index.html */
 }
 
-.catalogo_servicios {
+.servicios__catalogo {
     width: 60%;
     margin: 0 auto;
     display: grid;
@@ -788,7 +778,7 @@ fieldset {
     gap: 2.5rem;
 }
 
-.tarjeta_servicio {
+.servicios__tarjeta {
     background-color: var(--blanco);
     color: var(--primario);
     border-radius: 1rem;
@@ -799,43 +789,43 @@ fieldset {
     transition: transform 0.25s ease;
 }
 
-.tarjeta_servicio:hover {
+.servicios__tarjeta:hover {
     transform: translateY(-4px);
 }
 
-.tarjeta_servicio img {
+.servicios__tarjeta img {
     width: 100%;
     height: auto;
     border-radius: 1rem;
 }
 
-.servicio_lista li {
+.servicios__lista li {
     padding-bottom: 1.5rem;
     line-height: 1.5;
 }
 
-.servicio_lista h4 {
+.servicios__lista h4 {
     padding: 3rem 0 2rem 0;
     color: var(--nar-contrAzul);
 }
 
 @media (min-width: 1038px) {
-    .catalogo_servicios {
+    .servicios__catalogo {
         grid-template-columns: repeat(3, 3fr);
         gap: 2.5rem;
         width: 80%;
     }
 
-    .tarjeta_servicio {
+    .servicios__tarjeta {
         margin: 4rem auto;
         text-align: center;
     }
 
-      .tarjeta_servicio ul {
+      .servicios__tarjeta ul {
         text-align: left;
     }
 
-    .tarjeta_servicio img {
+    .servicios__tarjetao img {
         width: 80%;
     }
 }
