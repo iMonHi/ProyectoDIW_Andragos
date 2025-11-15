@@ -16,8 +16,7 @@
 </head>
 
 <body>
-    <header class="header">
-
+    <header class="header centrar-texto">
         <div class="contenedor">
             <div class="barra">
                 <p>
@@ -75,41 +74,46 @@
     </header>
 
     <main>
-        <section class="proyecto__intro justificar-centro">
+        <section class="proyecto__intro justificar-centro min-height">
             <div class="proyecto__intro-contenedor">
                 <h1 class="reclamo centrar-texto">Conoce nuestro proyecto Andragos</h1>
                 <p class="reclamo_subtitulo centrar-texto">La “andragogía” es la disciplina que estudia la educación y el aprendizaje de las personas adultas.</p>
 
                 <ul class="centrar-texto">
                     <li><a href="#motivacion">Nuestra motivación</a></li>
+                    <li><a href="#filosofia">La voz de los expertos</a></li>
                     <li><a href="#filosofia">Filosofía del proyecto</a></li>
                     <li><a href="#ayuda">A quién ayudamos</a></li>
-                    <li><a href="#trabajo">El trabajo que hacemos</a></li>
                 </ul>
             </div>
         </section>
 
         <section id="motivacion" class="proyecto__motivacion justificar-centro">
-            <div class="proyecto__motivacion-contenedor">
+            <div class="proyecto__motivacion-contenedor margin">
                 <img loading="lazy" src="/img/proyecto_seccion1.jpg" alt="imagen decorativa">
                 <div class="proyecto__motivacion-texto">
-                    <h3 class="centrar-texto">Qué nos motiva</h3>
+                    <h2>Qué nos motiva</h2>
                     <p>En la vida adulta también se aprende, se cambia y se empieza de nuevo.</p>
                     <p>Andragos nace para acompañar a personas que quieren comprenderse mejor, reencontrar su propósito y recuperar el equilibrio entre lo que sienten, lo que piensan y lo que necesitan.</p>
                     <p>No usamos recetas rápidas ni motivación vacía.</p>
                     <p>Creamos procesos serios y empáticos para que cada persona pueda avanzar con seguridad y realismo.</p>
                     <p>Nuestro compromiso es claro: acompañarte a construir una vida vivible, autónoma y con sentido.</p>
-                    <h3 class="centrar-texto">Y... ¿por qué?</h3>
-                    <p>Decidimos emprender este proyecto desde nuestra experienia vital y desde la total convicción de que nunca es tarde para comenzar de nuevo. Nosotros hemos emprendido este viaje. ¿y tú?</p>
                 </div>
             </div>
         </section>
 
-        <section id="filosofia" class="proyecto__filosofiaa proyecto__filosofia-fondo proyecto__seccion justificar-centro">
-            <div class="proyecto__filosofia-contenedor">
-                <h3 class="centrar-texto">Nuestra filosofía</h3>
+        <section id="expertos" class="proyecto__expertos justificar-centro">
+            <div class="proyecto__expertos-contenedor margin">
+                <h2 class="centrar-texto">¿Qué dicen los expertos?</h2>
+                <iframe src="https://www.youtube.com/watch?v=bFrSwbhe8Bo" title="Aprendemos Juntos" loading="lazy" allowfullscreen></iframe>      
+            </div>
+        </section>
+
+        <section id="filosofia" class="proyecto__filosofia proyecto__filosofia-fondo justificar-centro">
+            <div class="proyecto__filosofia-contenedor margin">
+                <h2 class="centrar-texto">Nuestra filosofía</h2>
                 <div class="proyecto__contenidos">
-                    <img loading="lazy" src="/img/proyecto_seccion2.jpg" alt="filosofia del centro">
+                    <img class="sombra-azul-claro" loading="lazy" src="/img/proyecto_seccion2.png" alt="filosofia del centro">
                     <div class="proyecto__filosofia-texto">
                         <h4>Respeto por los procesos adultos</h4>
                             <ul>
@@ -135,11 +139,11 @@
         </section>
 
 
-        <section id="ayuda" class="proyecto__ayuda proyecto__seccion justificar-centro">
-            <div class="proyecto__ayuda-contenedor">
+        <section id="ayuda" class="proyecto__ayuda justificar-centro">
+            <div class="proyecto__ayuda-contenedor margin">
                 <img loading="lazy" src="/img/proyecto_seccion3.jpg" alt="imagen decorativa">
                 <div class="proyecto__ayuda-texto">
-                    <h3 class="centrar-texto">¿A quién acompañamos?</h3>
+                    <h2 class="centrar-texto">¿A quién acompañamos?</h2>
                     <ul>
                         <li>Personas adultas con dificultades de aprendizaje en transición profesional</li>
                         <li>Adultos con necesidades educativas especiales y neurodivergentes</li>
@@ -150,26 +154,22 @@
                 </div>
             </div>
         </section>
-
     </main>
 
     <!-- Footer -->
     <footer class="footer">
-        <section class="footer">
-            <div class="contenedor">
-                <div class="barra">
-                    <a class="logo" href="index.html">
-                        <img loading="lazy" src="img/logo_andragos.png" alt="logo_andragos">
-                    </a>
-
-                    <nav class="navegacion">
-                        <a href="nosotros.html" class="navegacion__enlace">Nosotros</a>
-                        <a href="servicios.html" class="navegacion__enlace">Servicios</a>
-                        <a href="contacto.html" class="navegacion__enlace">Contacto</a>
-                    </nav>
-                </div>
+        <div class="contenedor">
+            <div class="barra centrar-texto">
+                <a class="logo" href="index.html">
+                    <img loading="lazy" src="img/logo_andragos.png" alt="logo_andragos">
+                </a>
+                <nav class="navegacion">
+                    <a href="nosotros.html" class="navegacion__enlace">Nosotros</a>
+                    <a href="servicios.html" class="navegacion__enlace">Servicios</a>
+                    <a href="contacto.html" class="navegacion__enlace">Contacto</a>
+                </nav>
             </div>
-        </section>
+        </div>
     </footer>
 
 </body>

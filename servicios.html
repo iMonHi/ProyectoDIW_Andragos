@@ -16,7 +16,7 @@
 </head>
 
 <body>
-    <header class="header">
+    <header class="header centrar-texto">
 
         <div>
             <div class="barra">
@@ -74,57 +74,60 @@
         </div>
     </header>
 
-    <main class="servicios__contenedor">
-        <h1 class="servicios__titulo centrar-texto">¿Qué ofrecemos en nuestro centro?</h1>
+    <main>
+        <!-- Catálogo de servicios -->
         <section class="servicios__catalogo">
-            <article class="servicios__tarjeta">
-                <img loading="lazy" src="/img/servicio_intervencion.png" alt="imagen decorativa">
-                <div class="servicios__lista">
-                    <h2 class="centrar-texto">Usuarios</h2>
-                    <ul>
-                        <li>Intervención psicopedagógica individual o grupal.</li>
-                        <li>Talleres de competencias profesionales y para el empleo.</li>
-                        <li>Apoyo académico en formación para adultos.</li>
-                    </ul>
-                </div>
-            </article>
-                
-            <article class="servicios__tarjeta">
-                <img loading="lazy" src="/img/servicio_familia.png" alt="imagen decorativa">
-                <div class="servicios__lista">
-                    <h2 class="centrar-texto">Familias</h2>
-                    <ul>
-                        <li>Talleres de psicoeducación.</li>
-                        <li>Acompañamiento emocional a familiares de usuarios.</li>
-                        <li>Talleres de competencias y pautas de manejo de usuarios.</li>
-                    </ul>
-                </div>
-            </article>
+            <h1 class="centrar-texto">¿Qué ofrecemos en nuestro centro?</h1>
+            <div class="servicios__catalogo--contenedor">    
+                <article class="servicios__tarjeta centrar-texto sombra-negra">
+                    <img loading="lazy" src="/img/servicio_intervencion.png" alt="imagen decorativa">
+                    <div class="servicios__lista">
+                        <h2 class="centrar-texto">Usuarios</h2>
+                        <ul>
+                            <li>Intervención psicopedagógica individual o grupal.</li>
+                            <li>Talleres de competencias profesionales y para el empleo.</li>
+                            <li>Apoyo académico en formación para adultos.</li>
+                        </ul>
+                    </div>
+                </article>
+                    
+                <article class="servicios__tarjeta centrar-texto sombra-negra">
+                    <img loading="lazy" src="/img/servicio_familia.png" alt="imagen decorativa">
+                    <div class="servicios__lista">
+                        <h2 class="centrar-texto">Familias</h2>
+                        <ul>
+                            <li>Talleres de psicoeducación.</li>
+                            <li>Acompañamiento emocional a familiares de usuarios.</li>
+                            <li>Talleres de competencias y pautas de manejo de usuarios.</li>
+                        </ul>
+                    </div>
+                </article>
 
-            <article class="servicios__tarjeta">
-                <img loading="lazy" src="/img/servicio_formacion.png" alt="imagen decorativa">
-                <div class="servicios__lista">
-                    <h2 class="centrar-texto">Centros y particulares</h2>
-                    <ul>
-                        <li>Formación a centros educativos para adultos.</li>
-                        <li>Talleres presenciales para centros y empresas.</li>
-                        <li>Formación online y asincrónica para interesados/as.</li>
-                    </ul>
-                </div>
-            </article>
+                <article class="servicios__tarjeta centrar-texto sombra-negra">
+                    <img loading="lazy" src="/img/servicio_formacion.png" alt="imagen decorativa">
+                    <div class="servicios__lista">
+                        <h2 class="centrar-texto">Centros y particulares</h2>
+                        <ul>
+                            <li>Formación a centros educativos para adultos.</li>
+                            <li>Talleres presenciales para centros y empresas.</li>
+                            <li>Formación online y asincrónica para interesados/as.</li>
+                        </ul>
+                    </div>
+                </article>
+            </div>
         </section>
 
-          
-        <section class="servicios justificar-centro">
-            <div class="servicios__contenedor">
+        <!-- Listado de precios -->
+        <section class="precios justificar-centro">
+            <div class="precios__contenedor">
                 <h2>Tarifas</h2>
                 
-                <table class="color--blanco">
-                    <caption>Tarifas orientativas</caption>
+                <table class="precios__tabla">
+                    <caption></caption>
                     <tr>
-                        <td></td>
-                        <th>Precio estándar</th>
-                        <th>Precio reducido*</th>
+                        <td class="no-border"></td>
+                        <th class="celda-color">Precio estándar</th>
+                        <th class="celda-color">Precio reducido*</th>
                     </tr>
                     <tr>
                         <th>Sesiones psicopedagógicas individuales</th>
@@ -158,52 +161,31 @@
                     </tr>
                 </table>
 
-                <h2>¿Por qué estos precios?</h2>
-                <ol class="color--blanco">
-                    <li>Costes profesionales y de especialización: La psicopedagogía para adultos requiere personal cualificado, formación continua y materiales específicos. Eso justifica tarifas como 50 € por sesión individual o 100 €/h en formación privada.</li>
-                    <li>Política de accesibilidad: Ofrecer precios reducidos (35 € individuales y 25 € grupales) suele ser una forma de no dejar fuera a personas con menor capacidad económica, manteniendo al mismo tiempo la viabilidad del centro.</li>
-                    <li>Adaptación del precio al valor y al formato del servicio: Cada actividad tiene un nivel de demanda y una dedicación distinta. La formación para empresas implica una intervención más especializada y personalizada, mientras que los cursos online permiten ofrecer un aprendizaje de calidad a un coste más accesible. Así, las tarifas reflejan de forma equilibrada el valor aportado en cada modalidad.</li>
+                <h3>¿Por qué estos precios?</h3>
+                <ol class="precios__razones">
+                    <li class="precio__razon--coste"><span>Costes profesionales y de especialización:</span> La psicopedagogía para adultos requiere personal cualificado, formación continua y materiales específicos. Eso justifica tarifas como 50 € por sesión individual o 100 €/h en formación privada.</li>
+                    <li class="precio__razon--accsibilidad"><span>Política de accesibilidad:</span> Ofrecer precios reducidos (35 € individuales y 25 € grupales) suele ser una forma de no dejar fuera a personas con menor capacidad económica, manteniendo al mismo tiempo la viabilidad del centro.</li>
+                    <li class="precio__razon--formacion"><span> del precio al valor y al formato del servicio:</span> Cada actividad tiene un nivel de demanda y una dedicación distinta. La formación para empresas implica una intervención más especializada y personalizada, mientras que los cursos online permiten ofrecer un aprendizaje de calidad a un coste más accesible. Así, las tarifas reflejan de forma equilibrada el valor aportado en cada modalidad.</li>
                 </ol>
-
-
-
-
-
-
-
-
-
-
-
             </div>
         </section>
-
-            
-
-
-
-
-
     </main>
 
     <!-- Footer -->
     <footer class="footer">
-        <section class="footer">
-            <div class="contenedor">
-                <div class="barra">
-                    <a class="logo" href="index.html">
-                        <img loading="lazy" src="img/logo_andragos.png" alt="logo_andragos">
-                    </a>
-
-                    <nav class="navegacion">
-                        <a href="nosotros.html" class="navegacion__enlace">Nosotros</a>
-                        <a href="servicios.html" class="navegacion__enlace">Servicios</a>
-                        <a href="contacto.html" class="navegacion__enlace">Contacto</a>
-                    </nav>
-                </div>
+        <div class="contenedor">
+            <div class="barra centrar-texto">
+                <a class="logo" href="index.html">
+                    <img loading="lazy" src="img/logo_andragos.png" alt="logo_andragos">
+                </a>
+                <nav class="navegacion">
+                    <a href="nosotros.html" class="navegacion__enlace">Nosotros</a>
+                    <a href="servicios.html" class="navegacion__enlace">Servicios</a>
+                    <a href="contacto.html" class="navegacion__enlace">Contacto</a>
+                </nav>
             </div>
-        </section>
+        </div>
     </footer>
-
+    
 </body>
 </html>

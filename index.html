@@ -18,7 +18,7 @@
 
 <body>
     <!-- Header -->
-    <header class="header">
+    <header class="header centrar-texto">
         <div class="contenedor">
             <div class="barra">
                 <p>
@@ -74,9 +74,9 @@
         </div>
     </header>
   
-    <main>
+    <main class="index">
         <!-- SECCIÓN 1 - Servicios ofrecidos -->
-        <section class="proyecto">
+        <section class="proyecto justificar-centro min-height">
             <div class="proyecto__contenedor">
                 <h1>Nuestro proyecto</h1>
                 <div class="objetivos">
@@ -91,50 +91,52 @@
         </section>
 
         <section class="empresa__ejes justificar-centro">
-            <div class="ejes">
+            <div class="empresa__ejes--contenedor margin">
                 <h2>¿Qué nos define?</h2>
-                <h3>Acompañamiento personalizado</h3>
+                <div class="ejes sombra-blanco">
+                    <h3>Acompañamiento personalizado</h3>
                     <p>Planes de intervención adaptados a tu historia, tus objetivos y tu ritmo.</p>
-                <h3>Enfoque integrador</h3>
+                    <h3>Enfoque integrador</h3>
                     <p>Psicopedagogía, neurociencia, intervención emocional y herramientas prácticas para el día a día.</p>
-                <h3>Trato humano y cercano</h3>
+                    <h3>Trato humano y cercano</h3>
                     <p>Sin juicios. Sin presiones. Con escucha, claridad y acompañamiento real.</p>
-                <h3>Resultados sostenibles</h3>
+                    <h3>Resultados sostenibles</h3>
                     <p>Ganancia de autonomía, claridad, bienestar emocional y sentido vital.</p>
+                </div>
             </div>
         </section>
 
         <!-- SECCIÓN 2 - Servicios ofrecidos -->
-        <section class="servicios justificar-centro">
-            <div class="servicios__contenedor">
+        <section class="servicios--index justificar-centro">
+            <div class="servicios__contenedor margin">
                 <h2>Servicios que ofrecemos</h2>
                 <div class="servicio__ofrecido">
                     <!-- Grid servicios -->
-                    <div class="servicio">
+                    <div class="servicio sombra-primario">
                         <div class="servicio__icono">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
                             <path fill-rule="evenodd" d="M7.5 6a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM3.751 20.105a8.25 8.25 0 0 1 16.498 0 .75.75 0 0 1-.437.695A18.683 18.683 0 0 1 12 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 0 1-.437-.695Z" clip-rule="evenodd" />
                             </svg>
                         </div>
                         <div class="servicio__intervencion">
-                            <h4>Intervención</h4> 
+                            <h3>Intervención</h3> 
                             <p>Sesiones individuales o grupales... insectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                         </div>
 
                     </div>
-                    <div class="servicio">
+                    <div class="servicio sombra-primario">
                         <div class="servicio__icono">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
                             <path fill-rule="evenodd" d="M2.25 2.25a.75.75 0 0 0 0 1.5H3v10.5a3 3 0 0 0 3 3h1.21l-1.172 3.513a.75.75 0 0 0 1.424.474l.329-.987h8.418l.33.987a.75.75 0 0 0 1.422-.474l-1.17-3.513H18a3 3 0 0 0 3-3V3.75h.75a.75.75 0 0 0 0-1.5H2.25Zm6.54 15h6.42l.5 1.5H8.29l.5-1.5Zm8.085-8.995a.75.75 0 1 0-.75-1.299 12.81 12.81 0 0 0-3.558 3.05L11.03 8.47a.75.75 0 0 0-1.06 0l-3 3a.75.75 0 1 0 1.06 1.06l2.47-2.47 1.617 1.618a.75.75 0 0 0 1.146-.102 11.312 11.312 0 0 1 3.612-3.321Z" clip-rule="evenodd" />
                             </svg>
                         </div>
                         <div class="servicio__asesoramiento">
-                            <h4>Asesoramiento</h4>
+                            <h3>Asesoramiento</h3>
                             <p>En centros FPA, a familias con familiares neurodivergentes adultos,...sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                         </div>
 
                     </div>
-                    <div class="servicio">
+                    <div class="servicio sombra-primario">
                         <div class="servicio__icono">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
                             <path d="M11.7 2.805a.75.75 0 0 1 .6 0A60.65 60.65 0 0 1 22.83 8.72a.75.75 0 0 1-.231 1.337 49.948 49.948 0 0 0-9.902 3.912l-.003.002c-.114.06-.227.119-.34.18a.75.75 0 0 1-.707 0A50.88 50.88 0 0 0 7.5 12.173v-.224c0-.131.067-.248.172-.311a54.615 54.615 0 0 1 4.653-2.52.75.75 0 0 0-.65-1.352 56.123 56.123 0 0 0-4.78 2.589 1.858 1.858 0 0 0-.859 1.228 49.803 49.803 0 0 0-4.634-1.527.75.75 0 0 1-.231-1.337A60.653 60.653 0 0 1 11.7 2.805Z" />
@@ -143,7 +145,7 @@
                             </svg>
                         </div>
                         <div class="servicio__formacion">
-                            <h4>Formación</h4>
+                            <h3>Formación</h3>
                             <p>Cursos online con sesiones sincrónicas y asincrónicas..., sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.</p>
                         </div>
                     </div>
@@ -152,39 +154,39 @@
         </section>
 
         <!-- SECCIÓN 3 - Nosotros -->
-        <section class="equipo justificar-centro">
-            <div class="equipo__contenedor centrar-texto">
+        <section class="equipo--index justificar-centro separador-gris">
+            <div class="equipo__contenedor centrar-texto margin">
                 <h2>Conoce a nuestro equipo</h2>
                 
                 <!-- Grid profesionales del centro -->
                 <div class="profesionales">
-                    <div class="profesional__tarjeta">
+                    <div class="profesional__tarjeta sombra-azul-claro">
                         <div class="perfil">
                             <h3>Juan Martínez</h3>
                             <img loading="lazy" src="/img/profesional_1.png" alt="foto de perfil" class="avatar">
                         </div>
-                        <p>Graduado en Terapia Ocupacional y máster en arteterapia. Facilito el desarrollo personal y emocional mediante actividades creativas, promoviendo autonomía, autoestima y habilidades sociales en contextos educativos.</p>
+                        <p>soy Graduado en Terapia Ocupacional y máster en arteterapia. Facilito el desarrollo personal y emocional mediante actividades creativas, promoviendo autonomía, autoestima y habilidades sociales en contextos educativos.</p>
                     </div>
-                    <div class="profesional__tarjeta">
+                    <div class="profesional__tarjeta sombra-azul-claro">
                         <div class="perfil">
                             <h3>Laura Galiano</h3>
                             <img loading="lazy" src="/img/profesional_2.png" alt="foto de perfil" class="avatar">
                         </div>
-                        <p>Licenciada en Psicopedagogía, intervengo en procesos de aprendizaje y orientación vocacional. Especialista en estrategias metacognitivas y adaptación curricular para adultos con dificultades de aprendizaje o reinserción educativa.</p>
+                        <p>Soy Licenciada en Psicopedagogía, intervengo en procesos de aprendizaje y orientación vocacional. Especialista en estrategias metacognitivas y adaptación curricular para adultos con dificultades de aprendizaje o reinserción educativa.</p>
                     </div>
-                    <div class="profesional__tarjeta">
+                    <div class="profesional__tarjeta sombra-azul-claro">
                         <div class="perfil">
                             <h3>María Saavedra</h3>
                             <img loading="lazy" src="/img/profesional_3.png" alt="foto de perfil" class="avatar">
                         </div>
-                        <p>Doctora en Psicología con especialización en neuropsicología. Evalúo funciones cognitivas, memoria y atención en adultos, diseñando planes de intervención para trastornos neurológicos o deterioro cognitivo leve.</p>
+                        <p>Soy Doctora en Psicología con especialización en neuropsicología. Evalúo funciones cognitivas, memoria y atención en adultos, diseñando planes de intervención para trastornos neurológicos o deterioro cognitivo leve.</p>
                     </div>
-                    <div class="profesional__tarjeta">
+                    <div class="profesional__tarjeta sombra-azul-claro">
                         <div class="perfil">
                             <h3>Ignacio Marzo</h3>
                             <img loading="lazy" src="/img/profesional_4.png" alt="foto de perfil" class="avatar">
                         </div>
-                        <p>Sociólogo y coach certificado en procesos educativos. Acompaño a adultos en transición profesional, fortaleciendo habilidades blandas, planificación de carrera y estrategias de inserción laboral con enfoque inclusivo.</p>
+                        <p>Soy Sociólogo y Coach certificado en procesos educativos. Acompaño a adultos en transición profesional, fortaleciendo habilidades blandas, planificación de carrera y estrategias de inserción laboral con enfoque inclusivo.</p>
                     </div>
                 </div>
             </div>
@@ -197,7 +199,7 @@
                     <h2 class="contacto__titulo">¿Tienes alguna duda?</h2>
                 </div>
 
-                <div class="formulario__contenedor">
+                <div class="formulario__contenedor centrar-texto">
                     <form class="formulario centrar-texto">
                         <!-- Nombre -->
                         <div class="espacio-campos">
@@ -312,7 +314,7 @@
 
                 <div class="grid__contacto">
                     <!-- Grid contactos -->
-                    <div class="metodo__contacto color--blanco">
+                    <div class="metodo__contacto color--blanco centrar-texto">
                         <div class="icono">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
                             <path d="M10.5 18.75a.75.75 0 0 0 0 1.5h3a.75.75 0 0 0 0-1.5h-3Z" />
@@ -345,21 +347,18 @@
 
     <!-- Footer -->
     <footer class="footer">
-        <section class="footer">
-            <div class="contenedor">
-                <div class="barra">
-                    <a class="logo" href="index.html">
-                        <img loading="lazy" src="img/logo_andragos.png" alt="logo_andragos">
-                    </a>
-
-                    <nav class="navegacion">
-                        <a href="nosotros.html" class="navegacion__enlace">Nosotros</a>
-                        <a href="servicios.html" class="navegacion__enlace">Servicios</a>
-                        <a href="contacto.html" class="navegacion__enlace">Contacto</a>
-                    </nav>
-                </div>
+        <div class="contenedor">
+            <div class="barra centrar-texto">
+                <a class="logo" href="index.html">
+                    <img loading="lazy" src="img/logo_andragos.png" alt="logo_andragos">
+                </a>
+                <nav class="navegacion">
+                    <a href="nosotros.html" class="navegacion__enlace">Nosotros</a>
+                    <a href="servicios.html" class="navegacion__enlace">Servicios</a>
+                    <a href="contacto.html" class="navegacion__enlace">Contacto</a>
+                </nav>
             </div>
-        </section>
+        </div>
     </footer>
 
 </body>
