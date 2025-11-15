@@ -241,69 +241,6 @@ img {
 }
 
 
-/* PAG. INDEX - Estructura layout contenido/aside */
-.index {
-    display: flex;
-    gap: 2rem;
-    align-items: flex-start;
-    /*width: 90%;
-    margin: 2rem auto;*/
-}
-
-.layout__contenido {
-    flex: 4; /* Para que ocupe más que el aside */
-}
-
-.layot__aside {
-    flex: 1;
-    background-color: var(--nar-contrBlanco);
-    padding: 1.5rem;
-    font-size: 1.2rem;
-}
-
-
-
-
-
-
-/* Aside */
-.aside__contacto--icono {
-    width: 20px;
-    height: auto;
-}
-
-.formacion__curso img {
-    width: 100px;
-    height: auto;
-}
-
-.layout__aside h2 {
-    font-size: 2.4rem;
-}
-
-.layout__aside h3 {
-    font-size: 1.8rem;
-}
-
-.layout__aside p {
-    font-size: 1.5rem;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* PAG. INDEX - Proyecto */
 .proyecto {
     background-image: url(img/bg_index.png);
@@ -529,6 +466,10 @@ img {
 .contacto__titulo {
     padding: 6rem 0 2rem 0;
     color: var(--nar-contrAzul);
+}
+
+.precios h3 {
+    color: var(--nar-contrAzClaro);
 }
 
 .formulario__contenedor {
@@ -877,6 +818,101 @@ fieldset {
 }
 
 
+/* PAG. SERVICIOS - Estructura layout contenido/aside */
+.input__icono-desplegable {
+    display: none;
+}
+
+.desplegable {
+    position: fixed;
+    right: 20px;
+    top: 125px;
+    z-index: 1000;
+}
+
+.icono__desplegable {
+    width: 50px;
+    background-color: var(--nar-contrAzul);
+    padding: 0.5rem 0rem;
+    margin: 0rem;
+    border: none;
+    border-radius: 5%;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+}
+
+.layout__aside {
+    position: absolute;
+    right: 0;
+    top: 0; /* PAra que empiece detrás del icono */
+    background-color: var(--nar-contrAzul);
+    padding: 1.5rem;
+    font-size: 1.2rem;
+    width: 300px;
+    /* Estilos para desplegable */
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.5s ease, opacity 0.4s ease;
+    z-index: 1; /* Menos que el icono */
+}
+
+.input__icono-desplegable:checked ~ .layout__aside {
+    max-height: 1500px;   /* más que la altura del contenido */
+    opacity: 1;
+}
+
+
+/* Contenido aside */
+.aside__contacto {
+    display: flex;
+    gap: 15%;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.aside__titulo {
+    font-size: 2.4rem;
+    color: var(--primario);
+    margin: 1.5rem 0rem 0rem 0rem;
+}
+
+.curso__titulo {
+    font-weight: 600;
+}
+
+.layout__aside p, .curso__titulo {
+    font-size: 1.5rem;
+    line-height: 1.2;
+}
+
+.aside__contacto--icono {
+    width: 20px;
+    height: auto;
+}
+
+.aside__contacto--icono svg {
+    transition: color 0.3 ease;
+    color: var(--primario);
+}
+
+.aside__contacto--icono svg:is(:hover, .active) {
+    color: var(--blanco);
+}
+
+.formacion__curso {
+    background: var(--blanco-tabla);
+    border-radius: 2%;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.formacion__curso p {
+    margin: 0.5rem;
+}
+
+
 /* PÁG. SERVICIOS -- Catálogo */
 .servicios__catalogo h1 {
     color: var(--nar-contrAzul);
@@ -955,8 +991,8 @@ fieldset {
     background-color: var(--azul_claro);
 }
 
-.precios h2, .precios h3 {
-    color: var(--nar-contrAzClaro);
+h2.precios__titulo {
+    color: var(--nar-contrBlanco);
 }
 
 .precios h3 {
@@ -1002,7 +1038,7 @@ fieldset {
     align-items: center;
     justify-content: center;
     gap: 15%;
-    color: var(--nar-contrAzClaro);
+    color: var(--primario);
     margin-bottom: 15rem;
 }
 
@@ -1012,7 +1048,7 @@ fieldset {
 
 .razones__iconos div:hover {
     transform: translateY(-5px);
-    color: var(--primario); /* Luego lo hereda el svg*/
+    color: var(--nar-contrBlanco); /* Luego lo hereda el svg*/
 }
 
 .razones__iconos svg {
