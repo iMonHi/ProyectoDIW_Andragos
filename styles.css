@@ -2,7 +2,7 @@
     --fuenteHeading: 'Poiret One', sans-serif;
     --fuenteParrafos: 'PT Sans', sans-serif;
 
-    --primario: #2C3E50;
+    --primario: #2b3d4f;
     --azul_claro: #B9CCE2;
     --azul-tabla: #779ac2;
     --hover-nav: linear-gradient(135deg, #B9CCE2 0%, #D6DDE3 100%);
@@ -11,9 +11,8 @@
     --blanco-rgb: rgba(255, 255, 255, 0.85);
     --blanco-tabla: rgba(255, 255, 255, 0.30);
     --nar-contrAzClaro: #6F442D;
-    --nar-contrBlanco: #9C6243;
+    --nar-contrBlanco: #8F593D;
     --nar-contrAzul: #F29B72; 
-    --verde: #a1c15c;
 }
 
 html {
@@ -34,7 +33,7 @@ body {
 /* Globales */
 a { text-decoration: none; }
 
-p { color: var(--primario); }
+p { color: black; }
 
 h1, h2, h3, h4 {
     font-family: var(--fuenteHeading);
@@ -282,6 +281,10 @@ img {
     color: var(--nar-contrBlanco);
 }
 
+.index h2:last-of-type {
+    color: var(--nar-contrAzul);
+}
+
 
 /* PAG. INDEX - Ejes */
 .empresa__ejes--contenedor {
@@ -446,11 +449,6 @@ img {
     margin-bottom: 2rem;
 }
 
-.h1__contacto {
-    color: var(--nar-contrAzul);
-    padding: 4rem 0 3rem 0;
-}
-
 .formulario__header p {
     color: var(--blanco);
 }
@@ -460,9 +458,13 @@ img {
     color: var(--nar-contrAzul);
 }
 
+.formulario__contenedor {
+    margin: auto;
+    max-width: 1000px;
+}
+
 .formulario {
     background-color: var(--blanco-rgb);
-    max-width: 90%;
     margin: 0 4rem;
     padding: 2rem 4rem;
     border: 3px solid var(--nar-contrBlanco);
@@ -690,7 +692,7 @@ fieldset {
 }
 
 .proyecto__filosofia-texto h4 {
-    color: var(--nar-contrAzClaro);
+    color: var(--primario);
 }
 
 .proyecto__filosofia-texto li {
@@ -810,15 +812,17 @@ fieldset {
 
 .servicios__lista h2 {
     color: var(--nar-contrBlanco);
+    margin: 2rem;
 }
 
 .servicios__catalogo--contenedor {
-    width: 60%;
+    width: 50%;
     margin: 0 auto;
-    padding-bottom: 5rem;
+    padding-bottom: 0rem;
     display: grid;
     grid-template-columns: 1fr;
     gap: 1.5rem;
+    padding-bottom: 5rem;
 }
 
 .servicios__catalogo {
@@ -829,7 +833,7 @@ fieldset {
     background-color: var(--blanco);
     color: var(--primario);
     border-radius: 1rem;
-    padding: 2rem 2.2rem;
+    padding: 1rem 1.5rem;
     margin: 1rem auto 4rem auto;
     grid-template-rows: auto 1fr;
     gap: 5rem;
@@ -883,7 +887,7 @@ fieldset {
 }
 
 .precios h3 {
-    margin: 5rem 0rem 3rem 0rem;
+    margin: 10rem 0rem 5rem 0rem;
 }
 
 .precios p {
@@ -914,16 +918,38 @@ fieldset {
 
 .precios__razones li {
     padding-bottom: 1.5rem;
-    list-style-type: none;
 }
 
 .precios__razones li:last-of-type {
     padding-bottom: 0rem;
 }
 
-.precio__razon--coste {
-    background: url(data:data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-    <path stroke-linecap="round" stroke-linejoin="round" d="M14.25 7.756a4.5 4.5 0 1 0 0 8.488M7.5 10.5h5.25m-5.25 3h5.25M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-    </svg>);
+.razones__iconos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15%;
+    color: var(--nar-contrAzClaro);
+    margin-bottom: 15rem;
+}
 
+.razones__iconos div {
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.razones__iconos div:hover {
+    transform: translateY(-5px);
+    color: var(--primario); /* Luego lo hereda el svg*/
+}
+
+.razones__iconos svg {
+    width: 7rem;
+    height: 7rem;
+    transition: inherit;
+}
+
+@media (max-width: 350px) {
+    .razones__iconos {
+        display: none;
+    }
 }

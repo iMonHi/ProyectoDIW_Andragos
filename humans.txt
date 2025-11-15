@@ -1,0 +1,16 @@
+/* TEAM */
+Developer: iMonHi
+Role: Desarrolladora Web (Estudiante DAW)
+GitHub: https://github.com/iMonHi
+
+/* SITE */
+Project: Andragos - Centro de Psicopedagogía para Adultos
+Repository: https://github.com/iMonHi/ProyectoDIW_Andragos
+URL: https://imonhi.github.io/ProyectoDIW_Andragos/
+Last update: 2025-11-15
+Language: es-ES
+Technologies: HTML, CSS
+
+/* ABOUT */
+Esta web es un proyecto académico del CFGS de Desarrollo de Aplicaciones Web.
+Andragos es una empresa ficticia desarrollada únicamente con fines académicos.
