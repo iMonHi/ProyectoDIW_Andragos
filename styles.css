@@ -8,7 +8,7 @@
     --hover-nav: linear-gradient(135deg, #B9CCE2 0%, #D6DDE3 100%);
     --blanco: #FAF7F3;
     --blanco-alternativo: #F3F0EC;
-    --blanco-rgb: rgba(255, 255, 255, 0.85);
+    --blanco-rgb: rgba(255, 255, 255, 0.80);
     --blanco-tabla: rgba(255, 255, 255, 0.30);
     --nar-contrAzClaro: #6F442D;
     --nar-contrBlanco: #8F593D;
@@ -241,6 +241,69 @@ img {
 }
 
 
+/* PAG. INDEX - Estructura layout contenido/aside */
+.index {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+    /*width: 90%;
+    margin: 2rem auto;*/
+}
+
+.layout__contenido {
+    flex: 4; /* Para que ocupe más que el aside */
+}
+
+.layot__aside {
+    flex: 1;
+    background-color: var(--nar-contrBlanco);
+    padding: 1.5rem;
+    font-size: 1.2rem;
+}
+
+
+
+
+
+
+/* Aside */
+.aside__contacto--icono {
+    width: 20px;
+    height: auto;
+}
+
+.formacion__curso img {
+    width: 100px;
+    height: auto;
+}
+
+.layout__aside h2 {
+    font-size: 2.4rem;
+}
+
+.layout__aside h3 {
+    font-size: 1.8rem;
+}
+
+.layout__aside p {
+    font-size: 1.5rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* PAG. INDEX - Proyecto */
 .proyecto {
     background-image: url(img/bg_index.png);
@@ -283,6 +346,16 @@ img {
 
 .index h2:last-of-type {
     color: var(--nar-contrAzul);
+}
+
+.contactar a {
+    font-size: 1.8rem;
+    transition: color 0.3s ease, font-weight 0.3s ease;
+}
+
+.contactar a:hover {
+    color: var(--primario);
+    font-weight: 600;
 }
 
 
