@@ -230,6 +230,7 @@ img {
 .logo img {
     margin-top: 1rem;
     width: 100px;
+    box-shadow: none;
 }
 
 .footer .navegacion {
