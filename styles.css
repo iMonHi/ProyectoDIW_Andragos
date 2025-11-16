@@ -817,101 +817,101 @@ fieldset {
     }
 }
 
-
 /* PAG. SERVICIOS - Estructura layout contenido/aside */
-.input__icono-desplegable {
-    display: none;
+@media (min-width: 488px) {
+    .input__icono-desplegable {
+        display: none;
+    }
+
+    .desplegable {
+        position: fixed;
+        right: 20px;
+        top: 125px;
+        z-index: 1000;
+    }
+
+    .icono__desplegable {
+        width: 50px;
+        background-color: var(--nar-contrAzul);
+        padding: 0.5rem 0rem;
+        margin: 0rem;
+        border: none;
+        border-radius: 5%;
+        cursor: pointer;
+        position: relative;
+        z-index: 2;
+    }
+
+    .layout__aside {
+        position: absolute;
+        right: 0;
+        top: 0; /* PAra que empiece detrás del icono */
+        background-color: var(--nar-contrAzul);
+        padding: 1.5rem;
+        font-size: 1.2rem;
+        width: 300px;
+        /* Estilos para desplegable */
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        transition: max-height 0.5s ease, opacity 0.4s ease;
+        z-index: 1; /* Menos que el icono */
+    }
+
+    .input__icono-desplegable:checked ~ .layout__aside {
+        max-height: 1500px;   /* más que la altura del contenido */
+        opacity: 1;
+    }
+
+
+    /* Contenido aside */
+    .aside__contacto {
+        display: flex;
+        gap: 15%;
+        justify-content: center;
+        margin-bottom: 1.5rem;
+    }
+
+    .aside__titulo {
+        font-size: 2.4rem;
+        color: var(--primario);
+        margin: 1.5rem 0rem 0rem 0rem;
+    }
+
+    .curso__titulo {
+        font-weight: 600;
+    }
+
+    .layout__aside p, .curso__titulo {
+        font-size: 1.5rem;
+        line-height: 1.2;
+    }
+
+    .aside__contacto--icono {
+        width: 20px;
+        height: auto;
+    }
+
+    .aside__contacto--icono svg {
+        transition: color 0.3 ease;
+        color: var(--primario);
+    }
+
+    .aside__contacto--icono svg:is(:hover, .active) {
+        color: var(--blanco);
+    }
+
+    .formacion__curso {
+        background: var(--blanco-tabla);
+        border-radius: 2%;
+        padding: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .formacion__curso p {
+        margin: 0.5rem;
+    }
 }
-
-.desplegable {
-    position: fixed;
-    right: 20px;
-    top: 125px;
-    z-index: 1000;
-}
-
-.icono__desplegable {
-    width: 50px;
-    background-color: var(--nar-contrAzul);
-    padding: 0.5rem 0rem;
-    margin: 0rem;
-    border: none;
-    border-radius: 5%;
-    cursor: pointer;
-    position: relative;
-    z-index: 2;
-}
-
-.layout__aside {
-    position: absolute;
-    right: 0;
-    top: 0; /* PAra que empiece detrás del icono */
-    background-color: var(--nar-contrAzul);
-    padding: 1.5rem;
-    font-size: 1.2rem;
-    width: 300px;
-    /* Estilos para desplegable */
-    max-height: 0;
-    overflow: hidden;
-    opacity: 0;
-    transition: max-height 0.5s ease, opacity 0.4s ease;
-    z-index: 1; /* Menos que el icono */
-}
-
-.input__icono-desplegable:checked ~ .layout__aside {
-    max-height: 1500px;   /* más que la altura del contenido */
-    opacity: 1;
-}
-
-
-/* Contenido aside */
-.aside__contacto {
-    display: flex;
-    gap: 15%;
-    justify-content: center;
-    margin-bottom: 1.5rem;
-}
-
-.aside__titulo {
-    font-size: 2.4rem;
-    color: var(--primario);
-    margin: 1.5rem 0rem 0rem 0rem;
-}
-
-.curso__titulo {
-    font-weight: 600;
-}
-
-.layout__aside p, .curso__titulo {
-    font-size: 1.5rem;
-    line-height: 1.2;
-}
-
-.aside__contacto--icono {
-    width: 20px;
-    height: auto;
-}
-
-.aside__contacto--icono svg {
-    transition: color 0.3 ease;
-    color: var(--primario);
-}
-
-.aside__contacto--icono svg:is(:hover, .active) {
-    color: var(--blanco);
-}
-
-.formacion__curso {
-    background: var(--blanco-tabla);
-    border-radius: 2%;
-    padding: 1rem;
-    margin-bottom: 1rem;
-}
-
-.formacion__curso p {
-    margin: 0.5rem;
-}
-
 
 /* PÁG. SERVICIOS -- Catálogo */
 .servicios__catalogo h1 {
@@ -925,7 +925,7 @@ fieldset {
 }
 
 .servicios__catalogo--contenedor {
-    width: 50%;
+    width: 75%;
     margin: 0 auto;
     padding-bottom: 0rem;
     display: grid;
@@ -942,7 +942,7 @@ fieldset {
     background-color: var(--blanco);
     color: var(--primario);
     border-radius: 1rem;
-    padding: 1rem 1.5rem;
+    padding: 1rem 1rem;
     margin: 1rem auto 4rem auto;
     grid-template-rows: auto 1fr;
     gap: 5rem;
@@ -960,29 +960,40 @@ fieldset {
 }
 
 .servicios__lista li {
-    padding-bottom: 1.5rem;
-    line-height: 1.5;
+    padding-bottom: 1rem;
+    line-height: 1.2;
 }
 
 @media (min-width: 950px) {
     .servicios__catalogo--contenedor {
         grid-template-columns: repeat(3, 3fr);
         column-gap: 5rem;
-        width: 80%;
+        width: 85%;
     }
 
     .servicios__tarjeta {
         margin: 4rem auto;
     }
 
-    .servicios__tarjetao img {
-        width: 80%;
+    .servicios__tarjeta img {
+        max-width: 200px;
     }
 }
 
 .contacto_servicios {
     background-color: var(--blanco);
     padding: 3rem 0;
+}
+
+@media (max-width: 1050px) {
+    .icono__desplegable {
+        opacity: 0.6;
+        transition: opacity 0.3s ease;
+    }
+
+    .icono__desplegable:hover {
+        opacity: 1;
+    }
 }
 
 
@@ -1043,12 +1054,11 @@ h2.precios__titulo {
 }
 
 .razones__iconos div {
-    transition: transform 0.3s ease, color 0.3s ease;
+    transition: transform 0.3s ease;
 }
 
 .razones__iconos div:hover {
-    transform: translateY(-5px);
-    color: var(--nar-contrBlanco); /* Luego lo hereda el svg*/
+    transform: translateY(-5px); /* Luego lo hereda el svg*/
 }
 
 .razones__iconos svg {
@@ -1061,6 +1071,63 @@ h2.precios__titulo {
     .razones__iconos {
         display: none;
     }
+}
+
+/* PÁG. SERVICIOS -- Cursos*/
+h2.formaciones {
+    color: var(--nar-contrBlanco);
+}
+
+.formaciones__contacto {
+    display: flex;
+    gap: 15%;
+    justify-content: center;
+    margin: 3rem auto 8rem auto;
+}
+
+.formaciones__contacto--icono {
+        width: 40px;
+        height: 40px;
+}
+
+.formaciones__contacto--icono svg {
+    transition: color 0.3s ease, width 0.3s ease;
+    color: var(--primario);
+}
+
+.formaciones__contacto--icono svg:is(:hover, .active) {
+    color: var(--nar-contrAzul);
+    width: 45px;
+}
+
+.cursos {
+    margin-bottom: 10rem;
+}
+
+.cursos__bloque {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--blanco-alternativo);
+    border-radius: 2%;
+    width: 60%;
+    margin: 5rem auto;
+    padding: 2rem 3rem;
+}
+
+.cursos__img {
+    width: 100px;
+    height: 100px;
+    border-radius: 5%;
+}
+
+.cursos__descripcion {
+    text-align: left;
+    padding-left: 3rem;
+    line-height: 1;
+}
+
+.cursos__titulo {
+    font-weight: bold;
 }
 
 
